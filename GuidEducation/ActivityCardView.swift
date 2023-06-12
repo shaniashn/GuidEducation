@@ -14,7 +14,7 @@ struct ActivityCardView: View {
         HStack (alignment: .top, spacing: 0) {
             if activity.isTodayActivity {
                 Image("peluang")
-    //                .padding(.trailing)
+                    .padding(.trailing)
             }
             
             VStack(alignment: .leading, spacing: 10) {
