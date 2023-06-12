@@ -17,6 +17,7 @@
 		007A7BEE2A372993001DB240 /* NewActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BED2A372993001DB240 /* NewActivityView.swift */; };
 		007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF12A372BE1001DB240 /* ActivityModel.swift */; };
 		007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF32A372D1E001DB240 /* ActivityCardView.swift */; };
+		00B7F70C2A37A7ED0082ED63 /* Guidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7F70B2A37A7ED0082ED63 /* Guidelines.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		007A7BED2A372993001DB240 /* NewActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityView.swift; sourceTree = "<group>"; };
 		007A7BF12A372BE1001DB240 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		007A7BF32A372D1E001DB240 /* ActivityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardView.swift; sourceTree = "<group>"; };
+		00B7F70B2A37A7ED0082ED63 /* Guidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidelines.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 		007A7BD82A372895001DB240 /* GuidEducation */ = {
 			isa = PBXGroup;
 			children = (
+				00B7F70A2A37A7D50082ED63 /* movelater */,
 				007A7BD92A372895001DB240 /* GuidEducationApp.swift */,
 				007A7BDB2A372895001DB240 /* ContentView.swift */,
 				007A7BE72A3728C6001DB240 /* Home.swift */,
@@ -83,6 +86,14 @@
 				007A7BE02A372896001DB240 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		00B7F70A2A37A7D50082ED63 /* movelater */ = {
+			isa = PBXGroup;
+			children = (
+				00B7F70B2A37A7ED0082ED63 /* Guidelines.swift */,
+			);
+			name = movelater;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 				007A7BE82A3728C7001DB240 /* Home.swift in Sources */,
 				007A7BEC2A372924001DB240 /* ProfileView.swift in Sources */,
 				007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */,
+				00B7F70C2A37A7ED0082ED63 /* Guidelines.swift in Sources */,
 				007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */,
 				007A7BEA2A372919001DB240 /* Dashboard.swift in Sources */,
 				007A7BEE2A372993001DB240 /* NewActivityView.swift in Sources */,
