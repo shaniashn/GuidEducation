@@ -18,6 +18,7 @@
 		007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF12A372BE1001DB240 /* ActivityModel.swift */; };
 		007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF32A372D1E001DB240 /* ActivityCardView.swift */; };
 		00B7F70C2A37A7ED0082ED63 /* Guidelines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7F70B2A37A7ED0082ED63 /* Guidelines.swift */; };
+		00C669DA2A42E92F00EF8C74 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C669D92A42E92F00EF8C74 /* SwiftUIView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		007A7BF12A372BE1001DB240 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		007A7BF32A372D1E001DB240 /* ActivityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardView.swift; sourceTree = "<group>"; };
 		00B7F70B2A37A7ED0082ED63 /* Guidelines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Guidelines.swift; sourceTree = "<group>"; };
+		00C669D92A42E92F00EF8C74 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +78,7 @@
 				007A7BED2A372993001DB240 /* NewActivityView.swift */,
 				007A7BDD2A372896001DB240 /* Assets.xcassets */,
 				007A7BDF2A372896001DB240 /* Preview Content */,
+				00C669D92A42E92F00EF8C74 /* SwiftUIView.swift */,
 			);
 			path = GuidEducation;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				007A7BE82A3728C7001DB240 /* Home.swift in Sources */,
 				007A7BEC2A372924001DB240 /* ProfileView.swift in Sources */,
 				007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */,
+				00C669DA2A42E92F00EF8C74 /* SwiftUIView.swift in Sources */,
 				00B7F70C2A37A7ED0082ED63 /* Guidelines.swift in Sources */,
 				007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */,
 				007A7BEA2A372919001DB240 /* Dashboard.swift in Sources */,

@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group 363guide-img1.png",
+      "filename" : "Group 364guide-img1.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "guide-img1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "guide-img1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
