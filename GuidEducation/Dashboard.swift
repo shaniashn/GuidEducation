@@ -13,8 +13,8 @@ struct Dashboard: View {
             VStack(alignment: .leading) {
                 HStack {
                     VStack (alignment: .leading, spacing: 12) {
-                        Text("Hi, Gogon!")
-                            .font(.largeTitle)
+                        Text("Hello!")
+                            .font(.system(size: 34))
                             .fontWeight(.bold)
                         Text("Don't forget to make your plans")
                     }

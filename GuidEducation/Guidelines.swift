@@ -88,11 +88,6 @@ struct Guidelines: View {
             RoundedRectangle(cornerRadius: 12)
             .fill(Color("guidelines-yellow"))
             .frame(minWidth: 358, maxWidth: .infinity, minHeight: 82, maxHeight: 82)
-//            Image("guide-img1")
-//                .resizable()
-//                .scaledToFill()
-//                .frame(height: 100)
-//                .clipped()
             HStack {
                 Image("guide-img1")
                     .resizable()

@@ -25,6 +25,7 @@ struct Home: View {
                 }
                 .tag(1)
         }
+        
     }
 }
 
