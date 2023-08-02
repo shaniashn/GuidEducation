@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		006FEB1E2A753B8B0081060D /* TodayActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006FEB1D2A753B8B0081060D /* TodayActivity.swift */; };
+		002BCB2A2A7A9847003C9ED4 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BCB292A7A9847003C9ED4 /* TagView.swift */; };
+		006FEB1E2A753B8B0081060D /* TodayActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006FEB1D2A753B8B0081060D /* TodayActivityCard.swift */; };
 		006FEB252A755FAC0081060D /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006FEB242A755FAC0081060D /* ColorExt.swift */; };
 		007A7BDA2A372895001DB240 /* GuidEducationApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BD92A372895001DB240 /* GuidEducationApp.swift */; };
 		007A7BDC2A372895001DB240 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BDB2A372895001DB240 /* ContentView.swift */; };
@@ -24,7 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		006FEB1D2A753B8B0081060D /* TodayActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayActivity.swift; sourceTree = "<group>"; };
+		002BCB292A7A9847003C9ED4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
+		006FEB1D2A753B8B0081060D /* TodayActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayActivityCard.swift; sourceTree = "<group>"; };
 		006FEB242A755FAC0081060D /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
 		007A7BD62A372895001DB240 /* GuidEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GuidEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		007A7BD92A372895001DB240 /* GuidEducationApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidEducationApp.swift; sourceTree = "<group>"; };
@@ -63,7 +65,8 @@
 		006FEB1C2A753B330081060D /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				006FEB1D2A753B8B0081060D /* TodayActivity.swift */,
+				006FEB1D2A753B8B0081060D /* TodayActivityCard.swift */,
+				002BCB292A7A9847003C9ED4 /* TagView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -235,8 +238,9 @@
 				006FEB252A755FAC0081060D /* ColorExt.swift in Sources */,
 				007A7BE82A3728C7001DB240 /* Home.swift in Sources */,
 				007A7BEC2A372924001DB240 /* ProfileView.swift in Sources */,
-				006FEB1E2A753B8B0081060D /* TodayActivity.swift in Sources */,
+				006FEB1E2A753B8B0081060D /* TodayActivityCard.swift in Sources */,
 				007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */,
+				002BCB2A2A7A9847003C9ED4 /* TagView.swift in Sources */,
 				00C669DA2A42E92F00EF8C74 /* SwiftUIView.swift in Sources */,
 				00B7F70C2A37A7ED0082ED63 /* Guidelines.swift in Sources */,
 				007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */,

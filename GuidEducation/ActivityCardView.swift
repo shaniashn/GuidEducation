@@ -7,23 +7,6 @@
 
 import SwiftUI
 
-struct TagView: View {
-    var tagName: String
-    
-    var body: some View {
-        HStack {
-            Image("icon-tag")
-                .foregroundColor(.black)
-            Text(tagName)
-                .foregroundColor(.black)
-        }
-        .frame(height: 10)
-        .padding(6)
-        .background(Color.white)
-        .cornerRadius(50)
-    }
-}
-
 struct ActivityCardView: View {
     var activity: Activity
     
@@ -75,5 +58,6 @@ struct ActivityCardView: View {
 struct ActivityCardView_Previews: PreviewProvider {
     static var previews: some View {
         ActivityCardView(activity: Activity (judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan agar jadi pintar matrix kok ga panjang lagi", image: "", tags: ["Ulangan Harian","Ujian Akhir", "Tag1", "Tag2"], isTodayActivity: false))
+//        TagView(tagName: theTags[1].name).preferredColorScheme(.dark)
     }
 }
