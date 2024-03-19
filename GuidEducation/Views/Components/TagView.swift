@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TagView: View {
-    var tagName: String
+    @State var tagName: String
     
     var body: some View {
         HStack(spacing: 3){
@@ -32,8 +32,8 @@ struct TagView: View {
     }
 }
 
-struct TagView_Previews: PreviewProvider {
-    static var previews: some View {
-        TagView(tagName: "Math")
-    }
-}
+//struct TagView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TagView(tagName: "Mathematics")
+//    }
+//}
