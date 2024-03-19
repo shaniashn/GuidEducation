@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct GuidEducationApp: App {
+    @StateObject var vm = ActivityViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+//            ContentView()
+            Home()
         }
     }
 }
