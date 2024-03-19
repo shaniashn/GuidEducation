@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct Home: View {
+    @EnvironmentObject var vm: ActivityViewModel
+    
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
@@ -36,11 +38,13 @@ struct Home: View {
                         Text("Insert Calendar Here")
                     }
                     VStack {
-                        NavigationLink {
-                            
-                        } label: {
-//                            todayActivityCard
-//                            TodayActivityCard(activity: Activity)
+                        ForEach(vm.activities) { act in
+                            Button {
+                                
+                            } label: {
+                                TodayActivityCard(activity: act)
+                            }
+
                         }
 
                     }
@@ -55,5 +59,6 @@ struct Home: View {
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
         Home()
+            .environmentObject(ActivityViewModel())
     }
 }

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TodayActivityCard: View {
     
-    var activity: Activity
+    @State var activity: Activity
     
     var body: some View {
         HStack(spacing: 15){
@@ -31,9 +31,10 @@ struct TodayActivityCard: View {
                         .multilineTextAlignment(.leading)
                 }
                 HStack {
-                    ForEach(0..<2) {
-                        TagView(tagName: activity.tags[$0])
-//                        tagView()
+                    ForEach(activity.tags, id: \.self) { i in
+//                        TagView(tagName: activity.tags[$0])
+//                        TagView(tagName: activity.tags[0])
+                        TagView(tagName: i)
                     }
                     
                     if activity.tags.count > 2 {
@@ -62,7 +63,8 @@ struct TodayActivityCard: View {
 
 struct TodayActivityCard_Previews: PreviewProvider {
     static var previews: some View {
-        TodayActivityCard(activity: Activity(judul: "Matriks", deskripsi: "Students can calculate area, perimeter, volume of shapes and apply it to daily use", image: "biology-small", tags: ["Math", "Biology", "Exam"], isTodayActivity: true))
+        TodayActivityCard(activity: Activity(id: 7, judul: "Matriks", deskripsi: "Students can calculate area, perimeter, volume of shapes and apply it to daily use", image: "biology-small", tags: ["Math", "Biology", "Exam"], isTodayActivity: true))
+            
     }
 }
 

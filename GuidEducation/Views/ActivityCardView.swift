@@ -55,9 +55,9 @@ struct ActivityCardView: View {
     }
 }
 
-struct ActivityCardView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActivityCardView(activity: Activity (judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan agar jadi pintar matrix kok ga panjang lagi", image: "", tags: ["Ulangan Harian","Ujian Akhir", "Tag1", "Tag2"], isTodayActivity: false))
-//        TagView(tagName: theTags[1].name).preferredColorScheme(.dark)
-    }
-}
+//struct ActivityCardView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ActivityCardView(activity: Activity (id: 8, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan agar jadi pintar matrix kok ga panjang lagi", image: "", tags: ["Ulangan Harian","Ujian Akhir", "Tag1", "Tag2"], isTodayActivity: false))
+////        TagView(tagName: theTags[1].name).preferredColorScheme(.dark)
+//    }
+//}

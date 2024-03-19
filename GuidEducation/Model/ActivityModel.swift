@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Activity {
+struct Activity: Identifiable {
+    var id: Int
     var judul: String
     var deskripsi: String
     var image: String
@@ -17,17 +18,17 @@ struct Activity {
 
 class ActivityData {
    static var activityData: [Activity] = [
-        Activity (judul: "Dinamika Litosfer", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "", tags: ["Ulangan Harian","Ujian Akhir", "Matematika", "Science"], isTodayActivity: false),
-        Activity (judul: "Matrix2", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "", tags: ["Ulangan Harian","Ujian Akhir", "Hitung"], isTodayActivity: false),
-        Activity (judul: "Matrix3", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "", tags: ["Ulangan Harian","Ujian Akhir", "Matematika", "Science"], isTodayActivity: true),
-        Activity (judul: "Peluang", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "", tags: ["Math","Ujian Akhir", "Matematika", "Science"], isTodayActivity: true),
-        Activity(judul: "Matriks", deskripsi: "ini deskripsi", image: "", tags: ["Math"], isTodayActivity: true)
+    Activity (id: 1, judul: "Dinamika Litosfer", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "", tags: ["Ulangan Harian","Ujian Akhir",/* "Matematika", "Science"*/], isTodayActivity: false),
+    Activity (id: 2, judul: "Matrix2", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "", tags: ["Ulangan Harian","Ujian Akhir"], isTodayActivity: false),
+    Activity (id: 3, judul: "Matrix3", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "", tags: ["Ulangan Harian","Ujian Akhir", "Matematika", "Science"], isTodayActivity: true),
+    Activity (id: 4, judul: "Peluang", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "", tags: ["Math","Ujian Akhir", "Matematika", "Science"], isTodayActivity: true),
+    Activity(id: 5, judul: "Matriks", deskripsi: "ini deskripsi", image: "", tags: ["Math"], isTodayActivity: true)
     ]
     
     
 }
 
-var activity = Activity.init(judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ulangan Harian","Ujian Akhir", "Matematika", "Science"], isTodayActivity: true)
+var activity = Activity.init(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ujian Akhir", "Matematika"/*, "Science", "Apakek"*/], isTodayActivity: true)
 
 struct Tag : Hashable {
     var name: String
