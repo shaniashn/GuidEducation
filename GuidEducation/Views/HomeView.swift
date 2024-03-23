@@ -1,5 +1,5 @@
 //
-//  Home.swift
+//  HomeView.swift
 //  GuidEducation
 //
 //  Created by Sha Nia Siahaan on 12/06/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct Home: View {
+struct HomeView: View {
     @EnvironmentObject var vm: ActivityViewModel
     
     var body: some View {
@@ -49,16 +49,31 @@ struct Home: View {
 
                     }
                     
+                    HStack(content: {
+                        Text("Your Activities ")
+                        Spacer()
+                        Button(action: {
+                            
+                        }, label: {
+                            Text("See all")
+                        })
+                    })
+                    VStack(content: {
+                        ForEach(vm.activities) { act in
+                            ActivityCardView(activity: act)
+                        }
+                    })
                 }
+                .scrollIndicators(.hidden)
             }
+            .padding()
         }
-        .padding()
     }
 }
 
 struct Home_Previews: PreviewProvider {
     static var previews: some View {
-        Home()
+        HomeView()
             .environmentObject(ActivityViewModel())
     }
 }
