@@ -82,7 +82,7 @@ struct Guideliines: View {
     }
 }
 
-struct Guidelines: View {
+struct GuideCardView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
@@ -114,6 +114,6 @@ struct Guidelines: View {
 
 struct Guidelines_Previews: PreviewProvider {
     static var previews: some View {
-        Guidelines()
+        GuideCardView()
     }
 }
