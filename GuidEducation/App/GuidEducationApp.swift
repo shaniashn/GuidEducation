@@ -12,7 +12,7 @@ struct GuidEducationApp: App {
     @StateObject var vm = ActivityViewModel()
     var body: some Scene {
         WindowGroup {
-            Home()
+            HomeView()
                 .environmentObject(vm)
         }
     }
