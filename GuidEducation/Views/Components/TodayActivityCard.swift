@@ -12,7 +12,7 @@ struct TodayActivityCard: View {
     @State var activity: Activity
     
     var body: some View {
-        HStack(spacing: 15){
+        HStack(spacing: 0){
             Image(activity.image)
                 .resizable()
                 .scaledToFit()
@@ -21,7 +21,7 @@ struct TodayActivityCard: View {
                 VStack(alignment: .leading, spacing: 0) {
                     HStack {
                         Text(activity.judul)
-                            .font(.system(size: 18, weight: .bold))
+                            .font(.system(size: 16, weight: .bold))
                         Spacer()
                         Image(systemName: "chevron.right")
                         .foregroundColor(.white)
@@ -31,13 +31,20 @@ struct TodayActivityCard: View {
                         .multilineTextAlignment(.leading)
                 }
                 HStack {
-                    ForEach(activity.tags, id: \.self) { i in
-//                        TagView(tagName: activity.tags[$0])
-//                        TagView(tagName: activity.tags[0])
-                        TagView(tagName: i)
-                    }
+//              MARK: versi lain, seluruh tag
+//                    ForEach(activity.tags, id: \.self) { i in
+//                        TagView(tagName: i)
+//                    }
                     
-                    if activity.tags.count > 2 {
+//                    ForEach(0..<2) { idx in
+//                        TagView(tagName: activity.tags[idx])
+//                    }
+                    
+                    if activity.tags.count >= 2 {
+                        ForEach(0..<2) { idx in
+                            TagView(tagName: activity.tags[idx])
+                        }
+                        
                         Text("\(activity.tags.count-2)+")
                             .font(.system(size: 12))
                             .foregroundColor(.black)
@@ -50,12 +57,15 @@ struct TodayActivityCard: View {
                             }
                             .cornerRadius(50)
                     }
+                    else {
+                        TagView(tagName: activity.tags[0])
+                    }
                 }
             }
         }
         .foregroundColor(Color.white)
         .frame(maxWidth: .infinity)
-        .padding(5)
+        .padding(8)
         .background(Color.myBlue)
         .cornerRadius(12)
     }
