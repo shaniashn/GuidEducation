@@ -16,6 +16,12 @@ struct Activity: Identifiable {
     var isTodayActivity: Bool
 }
 
+struct Tag: Hashable, Identifiable {
+    var id = UUID().uuidString
+    var name: String
+    var isSelected: Bool
+}
+
 class ActivityData {
    static var activityData: [Activity] = [
     Activity (id: 1, judul: "Dinamika Litosfer", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "geology-yellow-small", tags: ["Ulangan Harian","Ujian Akhir", "Matematika", "Science"], isTodayActivity: false),
@@ -26,19 +32,16 @@ class ActivityData {
     ]
     
     static var theTags: [Tag] = [
-        Tag(name: "Math", isSelected: false),
-        Tag(name: "English", isSelected: false),
-        Tag(name: "Geography", isSelected: false),
-        Tag(name: "Physic", isSelected: false),
-        Tag(name: "Art", isSelected: false)
-    ]
+       Tag(name: "Math", isSelected: false),
+       Tag(name: "English", isSelected: false),
+       Tag(name: "Geography", isSelected: false),
+       Tag(name: "Socio", isSelected: false),
+       Tag(name: "Art", isSelected: false)
+   ]
+
+    
 }
 
 var activity = Activity.init(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ujian Akhir", "Matematika"/*, "Science", "Apakek"*/], isTodayActivity: true)
-
-struct Tag: Hashable {
-    var name: String
-    var isSelected: Bool
-}
 
 
