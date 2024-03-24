@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		00064A352BB0440A00DB2179 /* YourActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00064A342BB0440A00DB2179 /* YourActivityView.swift */; };
 		002BCB2A2A7A9847003C9ED4 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BCB292A7A9847003C9ED4 /* TagView.swift */; };
 		003ED17C2BADCB4800775034 /* AllActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003ED17B2BADCB4800775034 /* AllActivitiesView.swift */; };
 		00694D6B2BA9CA8B008E116E /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00694D6A2BA9CA8B008E116E /* ActivityViewModel.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		00064A342BB0440A00DB2179 /* YourActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourActivityView.swift; sourceTree = "<group>"; };
 		002BCB292A7A9847003C9ED4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		003ED17B2BADCB4800775034 /* AllActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActivitiesView.swift; sourceTree = "<group>"; };
 		00694D6A2BA9CA8B008E116E /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				007A7BE72A3728C6001DB240 /* HomeView.swift */,
 				007A7BEB2A372924001DB240 /* ProfileView.swift */,
 				003ED17B2BADCB4800775034 /* AllActivitiesView.swift */,
+				00064A342BB0440A00DB2179 /* YourActivityView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				00C669DA2A42E92F00EF8C74 /* SwiftUIView.swift in Sources */,
 				00B7F70C2A37A7ED0082ED63 /* GuideCardView.swift in Sources */,
 				00694D6B2BA9CA8B008E116E /* ActivityViewModel.swift in Sources */,
+				00064A352BB0440A00DB2179 /* YourActivityView.swift in Sources */,
 				007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */,
 				007A7BEE2A372993001DB240 /* NewActivityView.swift in Sources */,
 				007A7BDA2A372895001DB240 /* GuidEducationApp.swift in Sources */,
