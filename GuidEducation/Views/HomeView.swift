@@ -12,24 +12,25 @@ struct HomeView: View {
     
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading) {
-                HStack {
-                    VStack (alignment: .leading, spacing: 12) {
-                        Text("Hello!")
-                            .font(.system(size: 34))
-                            .fontWeight(.bold)
-                        Text("Don't forget to make your plans")
+                VStack(alignment: .leading) {
+                    ScrollView {
+                    HStack {
+                        VStack (alignment: .leading, spacing: 12) {
+                            Text("Hello!")
+                                .font(.system(size: 34))
+                                .fontWeight(.bold)
+                            Text("Don't forget to make your plans")
+                        }
+                        Spacer()
+                        NavigationLink(destination: NewActivityView()){
+                            Image(systemName: "plus")
+                                .resizable()
+                                .scaledToFit()
+                                .frame(width: 22, height: 22)
+                                .padding()
+                        }
                     }
-                    Spacer()
-                    NavigationLink(destination: NewActivityView()){
-                        Image(systemName: "plus")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 22, height: 22)
-                            .padding()
-                    }
-                }
-                ScrollView {
+                    
                     ZStack {
                         Rectangle()
                             .stroke(Color.black)
@@ -44,9 +45,9 @@ struct HomeView: View {
                             } label: {
                                 TodayActivityCard(activity: act)
                             }
-
+                            
                         }
-
+                        
                     }
                     
                     HStack(content: {
@@ -55,8 +56,15 @@ struct HomeView: View {
                         Button(action: {
                             
                         }, label: {
-                            Text("See all")
+                            
                         })
+                        
+                        NavigationLink {
+                            AllActivitiesView()
+                        } label: {
+                            Text("See all")
+                        }
+                        
                     })
                     VStack(content: {
                         ForEach(vm.activities) { act in
@@ -65,9 +73,11 @@ struct HomeView: View {
                     })
                 }
                 .scrollIndicators(.hidden)
+                .ignoresSafeArea()
             }
-            .padding()
+            .padding(.horizontal)
         }
+        
     }
 }
 
