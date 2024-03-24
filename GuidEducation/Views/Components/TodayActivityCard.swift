@@ -74,6 +74,7 @@ struct TodayActivityCard: View {
 struct TodayActivityCard_Previews: PreviewProvider {
     static var previews: some View {
         TodayActivityCard(activity: Activity(id: 7, judul: "Matriks", deskripsi: "Students can calculate area, perimeter, volume of shapes and apply it to daily use", image: "biology-small", tags: ["Math", "Biology", "Exam"], isTodayActivity: true))
+    
             
     }
 }
