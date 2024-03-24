@@ -19,15 +19,13 @@ struct AllActivitiesView: View {
             VStack {
                 ScrollView {
                     ScrollView(.horizontal) {
-                        ForEach(vm.tags, id: \.self) { tag in
-                            TagView(tagName: tag[0])
-                        }
-//                        HStack(content: {
-//                            ForEach(ActivityData.theTags, id: \.self) { i in
-//                                TagView(tagName: i.name)
-//                            }
-//                        })
-                        
+                        HStack(content: {
+                            ForEach(vm.tags) { tag in
+                                TagView(tagName: tag.name)
+                            }
+                        })
+                        .padding(1)
+//                        .background(Color.blue)
                     }
                     .scrollIndicators(.hidden)
                     HStack {
@@ -40,6 +38,11 @@ struct AllActivitiesView: View {
                             }
                         }
                     }
+                    VStack(content: {
+                        ForEach(vm.activities) { activity in
+                            TodayActivityCard(activity: activity)
+                        }
+                    })
                 }
 
                 
@@ -48,10 +51,13 @@ struct AllActivitiesView: View {
             .navigationBarTitleDisplayMode(.inline)
             .searchable(text: $search)
             .padding(.horizontal)
+            
         }
+        
     }
 }
 
 #Preview {
     AllActivitiesView()
+        .environmentObject(ActivityViewModel())
 }
