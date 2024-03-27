@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		00064A352BB0440A00DB2179 /* YourActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00064A342BB0440A00DB2179 /* YourActivityView.swift */; };
+		000D50772BB428870081AB63 /* ReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D50762BB428870081AB63 /* ReflectionView.swift */; };
 		002BCB2A2A7A9847003C9ED4 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BCB292A7A9847003C9ED4 /* TagView.swift */; };
 		003ED17C2BADCB4800775034 /* AllActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003ED17B2BADCB4800775034 /* AllActivitiesView.swift */; };
 		00551FFB2BB402DF0017C9DB /* ActivityEngageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00551FFA2BB402DF0017C9DB /* ActivityEngageView.swift */; };
-		00551FFD2BB402FC0017C9DB /* ReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00551FFC2BB402FC0017C9DB /* ReflectionView.swift */; };
+		00551FFD2BB402FC0017C9DB /* ReflectionResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00551FFC2BB402FC0017C9DB /* ReflectionResult.swift */; };
 		00694D6B2BA9CA8B008E116E /* ActivityViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00694D6A2BA9CA8B008E116E /* ActivityViewModel.swift */; };
 		006FEB1E2A753B8B0081060D /* TodayActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006FEB1D2A753B8B0081060D /* TodayActivityCard.swift */; };
 		006FEB252A755FAC0081060D /* ColorExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 006FEB242A755FAC0081060D /* ColorExt.swift */; };
@@ -30,10 +31,11 @@
 
 /* Begin PBXFileReference section */
 		00064A342BB0440A00DB2179 /* YourActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourActivityView.swift; sourceTree = "<group>"; };
+		000D50762BB428870081AB63 /* ReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionView.swift; sourceTree = "<group>"; };
 		002BCB292A7A9847003C9ED4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		003ED17B2BADCB4800775034 /* AllActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActivitiesView.swift; sourceTree = "<group>"; };
 		00551FFA2BB402DF0017C9DB /* ActivityEngageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityEngageView.swift; sourceTree = "<group>"; };
-		00551FFC2BB402FC0017C9DB /* ReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionView.swift; sourceTree = "<group>"; };
+		00551FFC2BB402FC0017C9DB /* ReflectionResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionResult.swift; sourceTree = "<group>"; };
 		00694D6A2BA9CA8B008E116E /* ActivityViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityViewModel.swift; sourceTree = "<group>"; };
 		006FEB1D2A753B8B0081060D /* TodayActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayActivityCard.swift; sourceTree = "<group>"; };
 		006FEB242A755FAC0081060D /* ColorExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExt.swift; sourceTree = "<group>"; };
@@ -71,7 +73,8 @@
 				00551FFA2BB402DF0017C9DB /* ActivityEngageView.swift */,
 				003ED17B2BADCB4800775034 /* AllActivitiesView.swift */,
 				00064A342BB0440A00DB2179 /* YourActivityView.swift */,
-				00551FFC2BB402FC0017C9DB /* ReflectionView.swift */,
+				00551FFC2BB402FC0017C9DB /* ReflectionResult.swift */,
+				000D50762BB428870081AB63 /* ReflectionView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -255,9 +258,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				007A7BDC2A372895001DB240 /* ContentView.swift in Sources */,
+				000D50772BB428870081AB63 /* ReflectionView.swift in Sources */,
 				006FEB252A755FAC0081060D /* ColorExt.swift in Sources */,
 				00551FFB2BB402DF0017C9DB /* ActivityEngageView.swift in Sources */,
-				00551FFD2BB402FC0017C9DB /* ReflectionView.swift in Sources */,
+				00551FFD2BB402FC0017C9DB /* ReflectionResult.swift in Sources */,
 				007A7BE82A3728C7001DB240 /* HomeView.swift in Sources */,
 				007A7BEC2A372924001DB240 /* ProfileView.swift in Sources */,
 				006FEB1E2A753B8B0081060D /* TodayActivityCard.swift in Sources */,
