@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct GuideCardView: View {
+    var imageGuides: [String] = ["guide-img1", "guide-img2", "guide-img3", "guide-img4", "guide-img5"]
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 12)
@@ -35,7 +36,6 @@ struct GuideCardView: View {
                     Image(systemName: "chevron.right")
                         .foregroundStyle(Color.black)
                 }
-
             }
             .padding(.trailing)
             
