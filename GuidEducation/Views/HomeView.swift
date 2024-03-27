@@ -75,6 +75,7 @@ struct HomeView: View {
                 .scrollIndicators(.hidden)
                 .ignoresSafeArea()
             }
+            .padding(.top)
             .padding(.horizontal)
         }
         
