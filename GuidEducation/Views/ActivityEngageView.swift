@@ -18,7 +18,7 @@ struct ActivityEngageView: View {
                         Spacer()
                     }
                     // MARK: -
-                    confidence
+                    engage
                 }
                 .frame(height: .infinity)
             }
@@ -72,9 +72,7 @@ extension ActivityEngageView {
                 }
                 .padding(.horizontal)
                 
-                TextField(text: $note) {
-                    Text("Write your note here")
-                }
+                TextEditor(text: $note)
                 .padding()
                 .frame(height: 150)
                 Spacer()
@@ -163,9 +161,7 @@ extension ActivityEngageView {
                 }
                 .padding(.horizontal)
                 
-                TextField(text: $note) {
-                    Text("Write your note here")
-                }
+                TextEditor(text: $note)
                 .padding()
                 .frame(height: 150)
                 
@@ -226,9 +222,7 @@ extension ActivityEngageView {
                 }
                 .padding(.horizontal)
                 
-                TextField(text: $note) {
-                    Text("Write your note here")
-                }
+                TextEditor(text: $note)
                 .padding()
                 .frame(height: 150)
                 Spacer()
@@ -290,9 +284,7 @@ extension ActivityEngageView {
                 }
                 .padding(.horizontal)
                 
-                TextField(text: $note) {
-                    Text("Write your note here")
-                }
+                TextEditor(text: $note)
                 .padding()
                 .frame(height: 150)
                 Spacer()
