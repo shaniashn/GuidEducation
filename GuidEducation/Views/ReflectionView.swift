@@ -20,7 +20,7 @@ struct ReflectionView: View {
                         .font(.system(size: 22, weight: .bold))
                         .multilineTextAlignment(.center)
                     
-                    scoring
+                    one
                     
                     HStack {
                         ForEach(0..<5) { _ in
