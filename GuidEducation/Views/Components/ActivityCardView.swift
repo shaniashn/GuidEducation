@@ -8,12 +8,13 @@
 import SwiftUI
 
 struct ActivityCardView: View {
-    var activity: Activity
+//    var activity: Activity
+    var card: Card
     
     var body: some View {
         HStack (alignment: .top, spacing: 0) {
-//            if activity.isTodayActivity {
-//                Image("activity-1s")
+//            if card.isTodayActivity {
+//                Image("card-1s")
 //                    .padding(.trailing)
 //            }
             
@@ -21,7 +22,7 @@ struct ActivityCardView: View {
                 VStack(alignment: .leading) {
 //                MARK: Judul
                     HStack{
-                        Text(activity.judul)
+                        Text(card.judul)
                             .font(.title)
                             .fontWeight(.bold)
                             .foregroundColor(.white)
@@ -32,7 +33,7 @@ struct ActivityCardView: View {
                     }
                     .font(.title2)
 //                MARK: Description
-                    Text(activity.deskripsi)
+                    Text(card.deskripsi)
                         .lineLimit(2)
                         .font(.subheadline)
                         .foregroundColor(Color.white)
@@ -40,35 +41,35 @@ struct ActivityCardView: View {
                 
 //                HStack {
 //                    ForEach(0..<2) { index in
-//                        TagView(tagName: activity.tags[index])
+//                        TagView(tagName: card.tags[index])
 //                    }
 //                    
-//                    if activity.tags.count > 1 {
-//                        Text("\(activity.tags.count-1)+")
+//                    if card.tags.count > 1 {
+//                        Text("\(card.tags.count-1)+")
 //                    }
 //                }
 //                .font(.caption)
 //                
-//                if !activity.isTodayActivity {
-//                    Image("activity-1b")
+//                if !card.isTodayActivity {
+//                    Image("card-1b")
 //                }
                 
                 HStack {
 //              MARK: versi lain, seluruh tag
-//                    ForEach(activity.tags, id: \.self) { i in
+//                    ForEach(card.tags, id: \.self) { i in
 //                        TagView(tagName: i)
 //                    }
                     
 //                    ForEach(0..<2) { idx in
-//                        TagView(tagName: activity.tags[idx])
+//                        TagView(tagName: card.tags[idx])
 //                    }
                     
-                    if activity.tags.count >= 2 {
+                    if card.tags.count >= 2 {
                         ForEach(0..<2) { idx in
-                            TagView(tagName: activity.tags[idx])
+                            TagView(tagName: card.tags[idx])
                         }
                         
-                        Text("\(activity.tags.count-2)+")
+                        Text("\(card.tags.count-2)+")
                             .font(.system(size: 12))
                             .foregroundColor(.black)
                             .padding(4)
@@ -81,7 +82,7 @@ struct ActivityCardView: View {
                             .cornerRadius(50)
                     }
                     else {
-                        TagView(tagName: activity.tags[0])
+                        TagView(tagName: card.tags[0])
                     }
                 }
                 Image("art-big")
@@ -91,10 +92,11 @@ struct ActivityCardView: View {
             
             
         }
-//        .frame(maxWidth: .infinity, maxHeight: activity.isTodayActivity ? 130 : 265)
+//        .frame(maxWidth: .infinity, maxHeight: card.isTodayActivity ? 130 : 265)
         .frame(maxWidth: .infinity)
         .padding()
-        .background(activity.isTodayActivity ? Color("today-activity-blue") : Color("your-activity-blue"))
+//        .background(card.isTodayActivity ? Color("today-activity-blue") : Color("your-activity-blue"))
+        .background(Color(.blue30))
         .cornerRadius(12)
         
     }
@@ -102,8 +104,8 @@ struct ActivityCardView: View {
 
 struct ActivityCardView_Previews: PreviewProvider {
     static var previews: some View {
-//        ActivityCardView(activity: Activity (id: 8, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan agar jadi pintar matrix kok ga panjang lagi", image: "", tags: ["Ulangan Harian","Ujian Akhir", "Tag1", "Tag2"], isTodayActivity: false))
+//        ActivityCardView(card: Activity (id: 8, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan agar jadi pintar matrix kok ga panjang lagi", image: "", tags: ["Ulangan Harian","Ujian Akhir", "Tag1", "Tag2"], isTodayActivity: false))
 //        TagView(tagName: theTags[1].name).preferredColorScheme(.dark)
-        ActivityCardView(activity: Activity(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ulangan Harian","Ujian Akhir", "Matematika", "Science"], isTodayActivity: true))
+        ActivityCardView(card: Card(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ulangan Harian","Ujian Akhir", "Matematika", "Science"], isTodayActivity: true))
     }
 }

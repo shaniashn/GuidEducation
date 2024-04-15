@@ -39,11 +39,11 @@ struct HomeView: View {
                         Text("Insert Calendar Here")
                     }
                     VStack {
-                        ForEach(vm.activities) { act in
+                        ForEach(vm.cards) { act in
                             Button {
                                 
                             } label: {
-                                TodayActivityCard(activity: act)
+                                TodayActivityCard(card: act)
                             }
                             
                         }
@@ -67,8 +67,8 @@ struct HomeView: View {
                         
                     })
                     VStack(content: {
-                        ForEach(vm.activities) { act in
-                            ActivityCardView(activity: act)
+                        ForEach(vm.cards) { act in
+                            ActivityCardView(card: act)
                         }
                     })
                 }

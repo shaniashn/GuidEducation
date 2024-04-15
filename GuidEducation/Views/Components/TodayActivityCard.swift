@@ -9,43 +9,44 @@ import SwiftUI
 
 struct TodayActivityCard: View {
     
-    @State var activity: Activity
+//    @State var activity: Activity
+    @State var card: Card
     
     var body: some View {
         HStack(spacing: 0){
-            Image(activity.image)
+            Image(card.image)
                 .resizable()
                 .scaledToFit()
                 .frame(width: 80)
             VStack(alignment: .leading){
                 VStack(alignment: .leading, spacing: 0) {
                     HStack {
-                        Text(activity.judul)
+                        Text(card.judul)
                             .font(.system(size: 16, weight: .bold))
                         Spacer()
                         Image(systemName: "chevron.right")
                         .foregroundColor(.white)
                     }
-                    Text(activity.deskripsi)
+                    Text(card.deskripsi)
                         .font(.system(size: 13, weight: .regular))
                         .multilineTextAlignment(.leading)
                 }
                 HStack {
 //              MARK: versi lain, seluruh tag
-//                    ForEach(activity.tags, id: \.self) { i in
+//                    ForEach(card.tags, id: \.self) { i in
 //                        TagView(tagName: i)
 //                    }
                     
 //                    ForEach(0..<2) { idx in
-//                        TagView(tagName: activity.tags[idx])
+//                        TagView(tagName: card.tags[idx])
 //                    }
                     
-                    if activity.tags.count >= 2 {
+                    if card.tags.count >= 2 {
                         ForEach(0..<2) { idx in
-                            TagView(tagName: activity.tags[idx])
+                            TagView(tagName: card.tags[idx])
                         }
                         
-                        Text("\(activity.tags.count-2)+")
+                        Text("\(card.tags.count-2)+")
                             .font(.system(size: 12))
                             .foregroundColor(.black)
                             .padding(4)
@@ -58,7 +59,7 @@ struct TodayActivityCard: View {
                             .cornerRadius(50)
                     }
                     else {
-                        TagView(tagName: activity.tags[0])
+                        TagView(tagName: card.tags[0])
                     }
                 }
             }
@@ -73,7 +74,7 @@ struct TodayActivityCard: View {
 
 struct TodayActivityCard_Previews: PreviewProvider {
     static var previews: some View {
-        TodayActivityCard(activity: Activity(id: 7, judul: "Matriks", deskripsi: "Students can calculate area, perimeter, volume of shapes and apply it to daily use", image: "biology-small", tags: ["Math", "Biology", "Exam"], isTodayActivity: true))
+        TodayActivityCard(card: Card(id: 7, judul: "Matriks", deskripsi: "Students can calculate area, perimeter, volume of shapes and apply it to daily use", image: "biology-small", tags: ["Math", "Biology", "Exam"], isTodayActivity: true))
     
             
     }

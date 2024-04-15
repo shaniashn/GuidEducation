@@ -39,8 +39,8 @@ struct AllActivitiesView: View {
                         }
                     }
                     VStack(content: {
-                        ForEach(vm.activities) { activity in
-                            TodayActivityCard(activity: activity)
+                        ForEach(vm.cards) { activity in
+                            TodayActivityCard(card: activity)
                         }
                     })
                 }
