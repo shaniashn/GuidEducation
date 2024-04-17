@@ -8,7 +8,18 @@
 import SwiftUI
 
 struct ReflectionView: View {
+    @EnvironmentObject var vm: ActivityViewModel
+    
     @State var thisPage: Bool = false
+    @State var isSelected: Bool = false
+    
+    var answers: [String] = [
+    "Very well, they actively participated throughout the whole activity",
+    "Good, they showed a sign of interest and participated enough in the activity",
+    "Poor, they didn’t seem to be interested and weren’t participating fully"
+    ]
+    
+    var ansSelected: [Bool] = [false, false, false]
     
     var body: some View {
         NavigationStack {
@@ -54,33 +65,80 @@ struct ReflectionView: View {
     }
 }
 
-#Preview {
-    ReflectionView()
-}
+//#Preview {
+//    ReflectionView()
+//}
 
 extension ReflectionView {
     private var one: some View {
         VStack(alignment: .leading){
-            ForEach(0..<3) { _ in
-                HStack(spacing: 20){
-                    Circle()
-                        .fill(Color.blue10)
-                        .frame(width: 14)
-                        .background {
-                            Circle()
-                                .stroke(Color.pink, lineWidth: 1)
-                                .frame(width: 30)
-                        }
-                    Text("Very well, they actively participated  throughout the whole activity")
+            ForEach(answrs1) { i in
+                Button {
                     
+                } label: {
+                    AnswerRow(isSelected: i.isSelected, text: i.ans)
                 }
-                .frame(maxWidth: .infinity, maxHeight: 60)
+                .frame(maxWidth: .infinity, alignment: .leading)
+                .padding(.leading)
                 .background {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.white)
                 }
-                
             }
+            
+//            Button {
+//                
+//            } label: {
+//                HStack(spacing: 20){
+//                    Circle()
+//                        .frame(width: 14)
+//                        .background {
+//                            Circle()
+//                                .stroke(Color("gray10"), lineWidth: 1)
+//                                .frame(width: 30)
+//                        }
+//                    Text("")
+//                        .multilineTextAlignment(.leading)
+//                        .font(.system(size: 16))
+//                        .frame(height: 60)
+//                    Spacer()
+//                    
+//                }
+//            }
+//            
+//            .frame(maxWidth: .infinity, alignment: .leading)
+//            .padding(.leading)
+//            .background {
+//                RoundedRectangle(cornerRadius: 10)
+//                    .fill(Color.white)
+//            }
+            
+//            Button {
+//                
+//            } label: {
+//                HStack(spacing: 20){
+//                    Circle()
+//                        .frame(width: 14)
+//                        .background {
+//                            Circle()
+//                                .stroke(Color("gray10"), lineWidth: 1)
+//                                .frame(width: 30)
+//                        }
+//                    Text("")
+//                        .multilineTextAlignment(.leading)
+//                        .font(.system(size: 16))
+//                        .frame(height: 60)
+//                    Spacer()
+//                    
+//                }
+//            }
+//            
+//            .frame(maxWidth: .infinity, alignment: .leading)
+//            .padding(.leading)
+//            .background {
+//                RoundedRectangle(cornerRadius: 10)
+//                    .fill(Color.white)
+//            }
         }
     }
     
