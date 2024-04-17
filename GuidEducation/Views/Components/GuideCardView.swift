@@ -99,14 +99,13 @@ struct GuideCardView: View {
                     .multilineTextAlignment(.leading)
 //                        .background(Color.pink)
                     Spacer()
-                    NavigationLink {
-//                        GuidelinesView()
-//                        GuidelinesView(id:)
-                        
-                    } label: {
-                        Image(systemName: "chevron.right")
-                            .foregroundStyle(Color.black)
-                    }
+                    Image(systemName: "chevron.right")
+                        .foregroundStyle(Color.black)
+//                    NavigationLink {
+//                    } label: {
+//                        Image(systemName: "chevron.right")
+//                            .foregroundStyle(Color.black)
+//                    }
                 }
                 .frame(width: 205)
                 .padding(.trailing)
