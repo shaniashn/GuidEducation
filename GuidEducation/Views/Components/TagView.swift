@@ -12,7 +12,7 @@ struct TagView: View {
     
     var body: some View {
         HStack(spacing: 3){
-            Image("\(tagName)-icon")
+            Image("\(tagName.replacingOccurrences(of: " ", with: ""))-icon")
                 .resizable()
                 .scaledToFit()
                 .frame(maxWidth: 10, maxHeight: 10)
