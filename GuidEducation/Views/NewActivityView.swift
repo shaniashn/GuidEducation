@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct NewActivityView: View {
-    var imageGuides: [String] = [
-        "guide-img1",
-        "guide-img2",
-        "guide-img3",
-        "guide-img4",
-        "guide-img5"
-    ]
-    var textGuides: [String] = [
-        "Create activity that engage learners", 
-        "Establish collaboration between learners",
-        "Help learners develop creative thinking",
-        "Build learners confidence",
-        "Reflection"
-    ]
-    var subTextGuides: [String] = [
-        "Choose activity that you will use",
-        "Choose activity that can develop collaboration",
-        "Choose activity that develop creative thinking",
-        "Choose activity that can build confidence",
-        "Time to reflect "
-    ]
+//    var imageGuides: [String] = [
+//        "guide-img1",
+//        "guide-img2",
+//        "guide-img3",
+//        "guide-img4",
+//        "guide-img5"
+//    ]
+//    var textGuides: [String] = [
+//        "Create activity that engage learners", 
+//        "Establish collaboration between learners",
+//        "Help learners develop creative thinking",
+//        "Build learners confidence",
+//        "Reflection"
+//    ]
+//    var subTextGuides: [String] = [
+//        "Choose activity that you will use",
+//        "Choose activity that can develop collaboration",
+//        "Choose activity that develop creative thinking",
+//        "Choose activity that can build confidence",
+//        "Time to reflect "
+//    ]
     
     @EnvironmentObject var vm: ActivityViewModel
     
@@ -110,15 +110,13 @@ struct NewActivityView: View {
                         Text("Guidelines")
                             .font(.system(size: 22, weight: .bold))
                         ForEach(0..<5) { item in
-//                            guideCardView(id: vm.guides[item].id, image: imageGuides[item], text: textGuides[item], subText: subTextGuides[item])
-//                            GuideCardView(id: 1, imageGuides: imageGuides[item], textGuides: textGuides[item], subTextGuides: subTextGuides[item])
 //                            guideCardView(id: vm.guides[item].id, image: vm.guides[item].imageGuides, text:vm.guides[item].textGuides, subText: vm.guides[item].subTextGuides)
                             NavigationLink {
                                 GuidelinesView(id: vm.guides[item].id)
                             } label: {
                                 GuideCardView(imageGuides: vm.guides[item].imageGuides, textGuides: vm.guides[item].textGuides, subTextGuides: vm.guides[item].subTextGuides)
                             }
-
+                            
                         }
                         
                     }
@@ -164,7 +162,6 @@ extension NewActivityView {
                             .font(.system(size: 10, weight: .regular))
                             .opacity(0.8)
                     }
-//                        .background(Color.pink)
                     Spacer()
                     NavigationLink {
 //                        GuidelinesView(id: id)
@@ -175,7 +172,6 @@ extension NewActivityView {
                 }
                 .frame(width: 205)
                 .padding(.trailing)
-//                .background(Color.gray)
             }
             
         }
