@@ -16,6 +16,8 @@ struct GuidEducationApp: App {
             HomeView()
                 .environmentObject(vm)
 //                .environmentObject(gvm)
+            
+//            ReflectionView()
         }
     }
 }
