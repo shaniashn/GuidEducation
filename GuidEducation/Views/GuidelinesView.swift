@@ -10,6 +10,7 @@ import SwiftUI
 struct GuidelinesView: View {
     @EnvironmentObject var vm: ActivityViewModel
 //    var guidesDictionary: [Int:String] = [1:"engage", 2:"collaboration", 3:""]
+    var colors = ["Red", "Green", "Blue", "Tartan"]
     var id: Int
     @State var note: String = ""
     
@@ -25,7 +26,7 @@ struct GuidelinesView: View {
 //                    engage
                     switch(id){
                     case 1:
-                        engage
+                        EngageView(engage: engageItem)
                     case 2:
                         collaboration
                     case 3:
@@ -52,6 +53,10 @@ struct GuidelinesView: View {
 }
 
 extension GuidelinesView {
+    
+    private func engagee(){
+        
+    }
     private var engage: some View {
         VStack {
             Rectangle()
@@ -89,6 +94,15 @@ extension GuidelinesView {
                             Spacer()
                         }
                         .frame(height: 30)
+//                        Picker(selection: $note) {
+//                            ForEach(colors, id: \.self) { i in
+//                                Text(i)
+//                            }
+//                        } label: {
+//                            Text("TEST")
+//                        }
+//                        .pickerStyle(.wheel)
+
                     }
                 }
                 .padding(.horizontal)
