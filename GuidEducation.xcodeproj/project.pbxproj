@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		00064A352BB0440A00DB2179 /* NewActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00064A342BB0440A00DB2179 /* NewActivityView.swift */; };
 		000D50772BB428870081AB63 /* ReflectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000D50762BB428870081AB63 /* ReflectionView.swift */; };
+		000ED9222BCFBE3E00FD50EF /* EngageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000ED9212BCFBE3E00FD50EF /* EngageView.swift */; };
+		000ED9242BCFBF7700FD50EF /* CollabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000ED9232BCFBF7700FD50EF /* CollabView.swift */; };
+		000ED9262BCFBFDC00FD50EF /* ThinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000ED9252BCFBFDC00FD50EF /* ThinkView.swift */; };
+		000ED9282BCFC02700FD50EF /* ConfidenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000ED9272BCFC02700FD50EF /* ConfidenceView.swift */; };
+		000ED92A2BD00A8600FD50EF /* MethodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000ED9292BD00A8600FD50EF /* MethodRow.swift */; };
 		002BCB2A2A7A9847003C9ED4 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BCB292A7A9847003C9ED4 /* TagView.swift */; };
 		003ED17C2BADCB4800775034 /* AllActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 003ED17B2BADCB4800775034 /* AllActivitiesView.swift */; };
 		00551FFB2BB402DF0017C9DB /* GuidelinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00551FFA2BB402DF0017C9DB /* GuidelinesView.swift */; };
@@ -27,11 +32,18 @@
 		00B7F70C2A37A7ED0082ED63 /* GuideCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7F70B2A37A7ED0082ED63 /* GuideCardView.swift */; };
 		00C669DA2A42E92F00EF8C74 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C669D92A42E92F00EF8C74 /* SwiftUIView.swift */; };
 		00CC6B5F2BCD310600E6C5A2 /* GuidelinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC6B5E2BCD310600E6C5A2 /* GuidelinesViewModel.swift */; };
+		00CC6B612BCE527D00E6C5A2 /* GlobalVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC6B602BCE527D00E6C5A2 /* GlobalVar.swift */; };
+		00CC6B632BCE9F3700E6C5A2 /* AnswerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC6B622BCE9F3700E6C5A2 /* AnswerRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		00064A342BB0440A00DB2179 /* NewActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivityView.swift; sourceTree = "<group>"; };
 		000D50762BB428870081AB63 /* ReflectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionView.swift; sourceTree = "<group>"; };
+		000ED9212BCFBE3E00FD50EF /* EngageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngageView.swift; sourceTree = "<group>"; };
+		000ED9232BCFBF7700FD50EF /* CollabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollabView.swift; sourceTree = "<group>"; };
+		000ED9252BCFBFDC00FD50EF /* ThinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinkView.swift; sourceTree = "<group>"; };
+		000ED9272BCFC02700FD50EF /* ConfidenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfidenceView.swift; sourceTree = "<group>"; };
+		000ED9292BD00A8600FD50EF /* MethodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodRow.swift; sourceTree = "<group>"; };
 		002BCB292A7A9847003C9ED4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		003ED17B2BADCB4800775034 /* AllActivitiesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllActivitiesView.swift; sourceTree = "<group>"; };
 		00551FFA2BB402DF0017C9DB /* GuidelinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesView.swift; sourceTree = "<group>"; };
@@ -51,6 +63,8 @@
 		00B7F70B2A37A7ED0082ED63 /* GuideCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCardView.swift; sourceTree = "<group>"; };
 		00C669D92A42E92F00EF8C74 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		00CC6B5E2BCD310600E6C5A2 /* GuidelinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesViewModel.swift; sourceTree = "<group>"; };
+		00CC6B602BCE527D00E6C5A2 /* GlobalVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVar.swift; sourceTree = "<group>"; };
+		00CC6B622BCE9F3700E6C5A2 /* AnswerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,17 +78,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		000ED91E2BCFBDF100FD50EF /* GuidelinesView */ = {
+			isa = PBXGroup;
+			children = (
+				000ED9212BCFBE3E00FD50EF /* EngageView.swift */,
+				000ED9292BD00A8600FD50EF /* MethodRow.swift */,
+				000ED9232BCFBF7700FD50EF /* CollabView.swift */,
+				000ED9272BCFC02700FD50EF /* ConfidenceView.swift */,
+				000ED9252BCFBFDC00FD50EF /* ThinkView.swift */,
+			);
+			path = GuidelinesView;
+			sourceTree = "<group>";
+		};
 		00694D682BA9CA30008E116E /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				000ED91E2BCFBDF100FD50EF /* GuidelinesView */,
 				006FEB1C2A753B330081060D /* Components */,
-				007A7BE72A3728C6001DB240 /* HomeView.swift */,
 				007A7BEB2A372924001DB240 /* ProfileView.swift */,
 				00551FFA2BB402DF0017C9DB /* GuidelinesView.swift */,
 				003ED17B2BADCB4800775034 /* AllActivitiesView.swift */,
 				00064A342BB0440A00DB2179 /* NewActivityView.swift */,
 				00551FFC2BB402FC0017C9DB /* ReflectionResult.swift */,
 				000D50762BB428870081AB63 /* ReflectionView.swift */,
+				00CC6B622BCE9F3700E6C5A2 /* AnswerRow.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -93,6 +120,7 @@
 			children = (
 				007A7BD92A372895001DB240 /* GuidEducationApp.swift */,
 				007A7BDB2A372895001DB240 /* ContentView.swift */,
+				007A7BE72A3728C6001DB240 /* HomeView.swift */,
 			);
 			path = App;
 			sourceTree = "<group>";
@@ -112,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				007A7BF12A372BE1001DB240 /* ActivityModel.swift */,
+				00CC6B602BCE527D00E6C5A2 /* GlobalVar.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,21 +288,28 @@
 			files = (
 				007A7BDC2A372895001DB240 /* ContentView.swift in Sources */,
 				000D50772BB428870081AB63 /* ReflectionView.swift in Sources */,
+				00CC6B612BCE527D00E6C5A2 /* GlobalVar.swift in Sources */,
+				000ED92A2BD00A8600FD50EF /* MethodRow.swift in Sources */,
 				006FEB252A755FAC0081060D /* ColorExt.swift in Sources */,
 				00551FFB2BB402DF0017C9DB /* GuidelinesView.swift in Sources */,
+				000ED9242BCFBF7700FD50EF /* CollabView.swift in Sources */,
 				00551FFD2BB402FC0017C9DB /* ReflectionResult.swift in Sources */,
 				007A7BE82A3728C7001DB240 /* HomeView.swift in Sources */,
 				007A7BEC2A372924001DB240 /* ProfileView.swift in Sources */,
 				00CC6B5F2BCD310600E6C5A2 /* GuidelinesViewModel.swift in Sources */,
 				006FEB1E2A753B8B0081060D /* TodayActivityCard.swift in Sources */,
+				000ED9222BCFBE3E00FD50EF /* EngageView.swift in Sources */,
 				007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */,
 				002BCB2A2A7A9847003C9ED4 /* TagView.swift in Sources */,
 				003ED17C2BADCB4800775034 /* AllActivitiesView.swift in Sources */,
 				00C669DA2A42E92F00EF8C74 /* SwiftUIView.swift in Sources */,
+				000ED9282BCFC02700FD50EF /* ConfidenceView.swift in Sources */,
 				00B7F70C2A37A7ED0082ED63 /* GuideCardView.swift in Sources */,
 				00694D6B2BA9CA8B008E116E /* ActivityViewModel.swift in Sources */,
 				00064A352BB0440A00DB2179 /* NewActivityView.swift in Sources */,
 				007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */,
+				000ED9262BCFBFDC00FD50EF /* ThinkView.swift in Sources */,
+				00CC6B632BCE9F3700E6C5A2 /* AnswerRow.swift in Sources */,
 				007A7BDA2A372895001DB240 /* GuidEducationApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
