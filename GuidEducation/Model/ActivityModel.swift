@@ -29,7 +29,9 @@ struct Activity: Identifiable {
     var objective: String
     var date: Date
     var tags: [Tag]
-    var guideline: Int
+//    var guideline: Int
+//    var answer: String
+    var engage: Engage
 }
 
 struct Guidelines: Identifiable {
@@ -40,6 +42,18 @@ struct Guidelines: Identifiable {
     var subTextGuides: String
 }
 
+struct Engage {
+    var engageAct: [Method]
+    var notes: String
+}
+
+struct Method: Identifiable {
+    var id: Int
+    var text: String
+    var isSelected: Bool
+    
+    
+}
 
 
 class ActivityData {
@@ -69,8 +83,18 @@ class ActivityData {
         Guidelines(id: 5, type: "reflection", imageGuides: "guide-img5", textGuides: "Reflection", subTextGuides: "Time to reflect")
     ]
     
+    static var engageData: [Engage] = [
+    
+    ]
+    
 }
 
 var activity = Card.init(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ujian Akhir", "Matematika"/*, "Science", "Apakek"*/], isTodayActivity: true)
 
+var engageItem = Engage(engageAct: methodData, notes: "this notes")
 
+var methodData: [Method] = [
+    Method(id: 1, text: "Ice breaking activity", isSelected: false),
+    Method(id: 2, text: "Give analogy", isSelected: false),
+    Method(id: 3, text: "Real case study", isSelected: true)
+]
