@@ -168,4 +168,6 @@ extension ReflectionResult {
 
 #Preview {
     ReflectionResult()
+        .previewLayout(.sizeThatFits)
 }
+
