@@ -9,9 +9,17 @@ import SwiftUI
 
 struct GuidelinesView: View {
     @EnvironmentObject var vm: ActivityViewModel
-//    var guidesDictionary: [Int:String] = [1:"engage", 2:"collaboration", 3:""]
-    var colors = ["Red", "Green", "Blue", "Tartan"]
-    var id: Int
+    
+//    var id: Int
+//    var activity: Activity
+    var guideType: Guide
+    
+    enum GuidesType {
+        case engage, collab, think, confidence, reflection
+        
+    }
+    
+    
     @State var note: String = ""
     
     var body: some View {
@@ -19,26 +27,37 @@ struct GuidelinesView: View {
             ScrollView {
                 ZStack {
                     VStack {
-                        Image("collaboration")
-                        Spacer()
+//                        Image("collaboration")
+//                        Spacer()
+                        Text("aaa")
+                            .onTapGesture {
+                                print(guideType.engage.self)
+                            }
                     }
                     // MARK: -
 //                    engage
-                    switch(id){
+//                    switch(GuidesType){
+//                    case GuidesType.engagge:
+////                        EngageView(engage: vm.activity[0].engage)
+//                        EngageView(engage: guideType.engage)
+//                    case 2:
+//                        collaboration
+//                    case 3:
+//                        thinking
+//                    case 4:
+//                        confidence
+//                    case 5:
+//                        ReflectionView()
+//                    default:
+//                        engage
+//                    }
+                    switch(guideType.id){
                     case 1:
-                        EngageView(engage: engageItem)
-                    case 2:
-                        collaboration
-                    case 3:
-                        thinking
-                    case 4:
-                        confidence
-                    case 5:
-                        ReflectionView()
+                        EngageView(engage: guideType.engage)
                     default:
                         engage
+                        
                     }
-                    
                     
                     //kalo id input sama dgn id dari vm
                 }
