@@ -9,6 +9,9 @@ import SwiftUI
 
 struct CollabView: View {
     @State var note = ""
+    @State var method = ""
+    @State var method2 = ""
+    @State var collab: Collab
     
     var body: some View {
         NavigationStack {
@@ -41,25 +44,39 @@ struct CollabView: View {
                                         .foregroundStyle(.black.opacity(0.5))
                                 }
                                 
-                                ForEach(0..<6) {_ in
-                                    HStack(spacing: 15){
-                                        Circle()
-                                            .fill(Color.blue10)
-                                            .frame(width: 14)
-                                            .background {
-                                                Circle()
-                                                    .stroke(Color.pink, lineWidth: 1)
-                                                    .frame(width: 30)
-                                            }
-                                        VStack(alignment: .leading){
-                                            Text("Discussions")
-                                                .font(.system(size: 17, weight: .semibold))
-                                            Text("Pair of group discussions")
-                                        }
-                                        Spacer()
-                                    }
-                                    .frame(height: 50)
+//                                ForEach(collab.collabThing.indices, id: \.self) { i in
+//                                
+//                                    HStack(spacing: 15){
+//                                        Circle()
+//                                            .fill(collab.collabThing[i].isSelected ? Color("gray20") : Color.clear)
+//                                            .frame(width: 16)
+//                                            .background {
+//                                                Circle()
+//                                                    .stroke(Color("gray10"), lineWidth: 1.5)
+//                                                    .frame(width: 16)
+//                                            }
+//                                        VStack(alignment: .leading){
+////                                            Text("Discussions")
+//                                            Text(collab.collabThing[i].text)
+//                                                .font(.system(size: 17, weight: .semibold))
+////                                            Text("Pair of group discussions")
+//                                            Text(collab.collabThing[i].text2!)
+//                                        }
+//                                        Spacer()
+//                                    }
+//                                    .frame(height: 50)
+                                ForEach(collab.collabThing) { item in
+                                    MethodRow(method: item)
                                 }
+                                HStack {
+                                    Image(systemName: "plus")
+                                        .foregroundStyle(Color.accentColor)
+                                    TextField("Add your own method", text: $method)
+                                    Spacer()
+                                }
+                                .frame(height: 30)
+//
+//                                }
                             }
                             .padding(.horizontal)
                             
@@ -74,17 +91,30 @@ struct CollabView: View {
                             .padding(.horizontal)
                             .padding(.top)
                             
-                            ForEach(0..<5) { _ in
+//                            ForEach(0..<5) { _ in
+//                                HStack {
+//                                    Circle()
+//                                        .fill(Color.clear)
+//                                        .frame(width: 14)
+//                                        .background {
+//                                            Circle()
+//                                                .stroke(Color.pink, lineWidth: 1)
+//                                                .frame(width: 30)
+//                                        }
+//                                    Text("ss")
+//                                    Spacer()
+//                                }
+//                                .frame(height: 30)
+//                            }
+                            VStack {
+                                ForEach(collab.collabAct, content: { item in
+                                    MethodRow(method: item)
+                                })
+                                
                                 HStack {
-                                    Circle()
-                                        .fill(Color.clear)
-                                        .frame(width: 14)
-                                        .background {
-                                            Circle()
-                                                .stroke(Color.pink, lineWidth: 1)
-                                                .frame(width: 30)
-                                        }
-                                    Text("ss")
+                                    Image(systemName: "plus")
+                                        .foregroundStyle(Color.accentColor)
+                                    TextField("Add your own method", text: $method)
                                     Spacer()
                                 }
                                 .frame(height: 30)
@@ -100,7 +130,7 @@ struct CollabView: View {
                         .background {
                             RoundedRectangle(cornerRadius: 20)
                                 .fill(Color("guidelines-gray"))
-                                .frame(height: .infinity)
+//                                .frame(height: .infinity)
                         }
                         .padding()
                     }
@@ -115,5 +145,5 @@ struct CollabView: View {
 }
 
 #Preview {
-    CollabView()
+    CollabView(collab: collabItem)
 }
