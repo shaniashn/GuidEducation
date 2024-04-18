@@ -29,7 +29,7 @@ struct GuideCardView: View {
 //        "Choose activity that can build confidence",
 //        "Time to reflect "
 //    ]
-    @EnvironmentObject var vm: ActivityViewModel
+//    @EnvironmentObject var vm: ActivityViewModel
     
 //    var id: Int
     var imageGuides: String
