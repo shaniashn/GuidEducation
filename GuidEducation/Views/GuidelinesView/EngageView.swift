@@ -41,11 +41,6 @@ struct EngageView: View {
                                         .font(.system(size: 15, weight: .regular))
                                         .foregroundStyle(.black.opacity(0.5))
                                 }
-                                
-//                                ForEach(0..<5) { _ in
-//                                ForEach(engageItem.engageAct, id: \.self) { i in
-//                                    MethodRow(text: i)
-//                                }
                                 ForEach(engage.engageAct) { method in
                                     MethodRow(method: method)
                                 }
