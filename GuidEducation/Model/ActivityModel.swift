@@ -24,19 +24,40 @@ struct Tag: Hashable, Identifiable {
 }
 
 struct Activity: Identifiable {
-    var id: Int
+    var id: String
     var title: String
     var objective: String
-    var date: Date
+//    var date: Date
     var tags: [Tag]
-//    var guideline: Int
+    var guideline: [Guidelines]
+    var guide: Guide
 //    var answer: String
+//    var engage: Engage
+    
+    init(id: String = UUID().uuidString, title: String, objective: String, tags: [Tag], guideline: [Guidelines], guide: Guide) {
+        self.id = id
+        self.title = title
+        self.objective = objective
+//        self.date = ""
+        self.tags = tags
+        self.guideline = guideline
+        self.guide = guide
+//        self.engage = engage
+    }
+}
+
+
+
+struct Guide {
+    var id: Int
     var engage: Engage
+    var collab: Collab
 }
 
 struct Guidelines: Identifiable {
     var id: Int
-    var type: String
+//    var type: GuidesType
+    var type: Guide
     var imageGuides: String
     var textGuides: String
     var subTextGuides: String
@@ -47,17 +68,24 @@ struct Engage {
     var notes: String
 }
 
+struct Collab {
+    var collabThing: [Method]
+    var collabAct: [Method]
+    var notes: String
+}
+
+struct Think {
+    
+}
+
 struct Method: Identifiable {
     var id: Int
     var text: String
     var isSelected: Bool
-    
-    
 }
 
-
 class ActivityData {
-   static var activityData: [Card] = [
+   static var cardData: [Card] = [
     Card (id: 1, judul: "Dinamika Litosfer", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "geology-yellow-small", tags: ["Ulangan Harian","Ujian Akhir", "Matematika", "Science"], isTodayActivity: false),
     Card (id: 2, judul: "Ruang dan Komposisi", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "art-small", tags: ["Ulangan Harian","Ujian Akhir"], isTodayActivity: false),
     Card (id: 3, judul: "Alat Pernapasan", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "biology-small", tags: ["Ulangan Harian","Ujian Akhir", "Matematika", "Science"], isTodayActivity: true),
@@ -76,25 +104,33 @@ class ActivityData {
     var x = ""
     
     static var guidelinesData: [Guidelines] = [
-        Guidelines(id: 1, type: "engage", imageGuides: "guide-img1", textGuides: "Create activity that engage learners", subTextGuides: "Choose activity that you will use"),
-        Guidelines(id: 2, type: "collaboration", imageGuides: "guide-img2", textGuides: "Establish collaboration between learners", subTextGuides: "Choose activity that can develop collaboration"),
-        Guidelines(id: 3, type: "thinking", imageGuides: "guide-img3", textGuides: "Help learners develop creative thinking", subTextGuides: "Choose activity that develop creative thinking"),
-        Guidelines(id: 4, type: "confidence", imageGuides: "guide-img4", textGuides: "Build learners confidence", subTextGuides: "Choose activity that can build confidence"),
-        Guidelines(id: 5, type: "reflection", imageGuides: "guide-img5", textGuides: "Reflection", subTextGuides: "Time to reflect")
+        Guidelines(id: 1, type: guideItem, imageGuides: "guide-img1", textGuides: "Create activity that engage learners", subTextGuides: "Choose activity that you will use"),
+        Guidelines(id: 2, type: guideItem, imageGuides: "guide-img2", textGuides: "Establish collaboration between learners", subTextGuides: "Choose activity that can develop collaboration"),
+        Guidelines(id: 3, type: guideItem, imageGuides: "guide-img3", textGuides: "Help learners develop creative thinking", subTextGuides: "Choose activity that develop creative thinking"),
+        Guidelines(id: 4, type: guideItem, imageGuides: "guide-img4", textGuides: "Build learners confidence", subTextGuides: "Choose activity that can build confidence"),
+        Guidelines(id: 5, type: guideItem, imageGuides: "guide-img5", textGuides: "Reflection", subTextGuides: "Time to reflect")
     ]
     
-    static var engageData: [Engage] = [
+    static var activityData: Activity = Activity(id: "1", title: "Dinamika Litosfer", objective: "Memahami dinamika litosfer dan dampaknya terhadap kehidupan", tags: [tag], guideline: guidelinesData, guide: guideItem)
+        
     
-    ]
     
 }
 
-var activity = Card.init(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ujian Akhir", "Matematika"/*, "Science", "Apakek"*/], isTodayActivity: true)
+
+var activity = Card.init(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ujian Akhir", "Matematika"], isTodayActivity: true)
+
+var guideItem = Guide(id: 1, engage: engageItem, collab: collabItem)
 
 var engageItem = Engage(engageAct: methodData, notes: "this notes")
+var collabItem = Collab(collabThing: [Method(id: 1, text: "Discussions", isSelected: true),
+                                      Method(id: 2, text: "Activities", isSelected: false)
+                                     ], collabAct: methodData, notes: "the notes")
 
 var methodData: [Method] = [
     Method(id: 1, text: "Ice breaking activity", isSelected: false),
     Method(id: 2, text: "Give analogy", isSelected: false),
     Method(id: 3, text: "Real case study", isSelected: true)
 ]
+
+var tag: Tag = Tag(name: "Geography", isSelected: false)
