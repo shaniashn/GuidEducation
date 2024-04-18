@@ -7,6 +7,6 @@
 
 import Foundation
 
-class GuidelinesViewModel: ObservableObject {
-    @Published var guides: [Guidelines] = []
-}
+//class GuidelinesViewModel: ObservableObject {
+//    @Published var guides: [Guidelines] = []
+//}
