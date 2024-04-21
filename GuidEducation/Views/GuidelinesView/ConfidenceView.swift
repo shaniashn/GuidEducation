@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ConfidenceView: View {
+    var confidence: Confidence
+    
     @State var note = ""
+    @State var method = ""
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -40,27 +44,36 @@ struct ConfidenceView: View {
                                         .font(.system(size: 15, weight: .regular))
                                         .foregroundStyle(.black.opacity(0.5))
                                 }
-                                
-                                ForEach(0..<6) {_ in
-                                    HStack(spacing: 15){
-                                        Circle()
-                                            .fill(Color.blue10)
-                                            .frame(width: 14)
-                                            .background {
-                                                Circle()
-                                                    .stroke(Color.pink, lineWidth: 1)
-                                                    .frame(width: 30)
-                                            }
-                                        VStack(alignment: .leading){
-                                            Text("Peer Feedback")
-                                                .font(.system(size: 17, weight: .semibold))
-                                            Text("Encourage peer feedback")
-                                                .font(.system(size: 16, weight: .regular))
-                                        }
-                                        Spacer()
-                                    }
-                                    .frame(height: 50)
+                                ForEach(confidence.confiThing) { method in
+//                                ForEach(0..<6) {_ in
+//                                    HStack(spacing: 15){
+//                                        Circle()
+//                                            .fill(Color.blue10)
+//                                            .frame(width: 14)
+//                                            .background {
+//                                                Circle()
+//                                                    .stroke(Color.pink, lineWidth: 1)
+//                                                    .frame(width: 30)
+//                                            }
+//                                        VStack(alignment: .leading){
+//                                            Text("Peer Feedback")
+//                                                .font(.system(size: 17, weight: .semibold))
+//                                            Text("Encourage peer feedback")
+//                                                .font(.system(size: 16, weight: .regular))
+//                                        }
+//                                        Spacer()
+//                                    }
+//                                    .frame(height: 50)
+                                    MethodRow(method: method)
                                 }
+                                HStack {
+                                    Image(systemName: "plus")
+                                        .foregroundStyle(Color.accentColor)
+                                    TextField("Add your own method", text: $method)
+                                    Spacer()
+                                }
+                                .frame(height: 30)
+                                    
                             }
                             .padding(.horizontal)
                             
@@ -72,7 +85,7 @@ struct ConfidenceView: View {
                         .background {
                             RoundedRectangle(cornerRadius: 20)
                                 .fill(Color("guidelines-gray"))
-                                .frame(height: .infinity)
+//                                .frame(height: .infinity)
                         }
                         .padding()
                     }
@@ -87,5 +100,5 @@ struct ConfidenceView: View {
 }
 
 #Preview {
-    ConfidenceView()
+    ConfidenceView(confidence: confiItem)
 }
