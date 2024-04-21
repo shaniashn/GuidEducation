@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct AnswerRow: View {
+    var id: Int
     var isSelected: Bool
     var text: String
     var body: some View {
@@ -31,5 +32,5 @@ struct AnswerRow: View {
 }
 
 #Preview {
-    AnswerRow(isSelected: false, text: "aa")
+    AnswerRow(id: 1, isSelected: false, text: "aa")
 }
