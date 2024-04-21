@@ -139,11 +139,21 @@ struct NewActivityView: View {
                             GuideCardView(imageGuides: vm.activity.guideline[1].imageGuides, textGuides: vm.activity.guideline[1].textGuides, subTextGuides: vm.activity.guideline[1].subTextGuides)
                         }
                         NavigationLink {
-                            CollabView(collab: vm.activity.guide.collab)
+                            ThinkView(think: vm.activity.guide.think)
                         } label: {
-                            GuideCardView(imageGuides: vm.activity.guideline[1].imageGuides, textGuides: vm.activity.guideline[1].textGuides, subTextGuides: vm.activity.guideline[1].subTextGuides)
+                            GuideCardView(imageGuides: vm.activity.guideline[2].imageGuides, textGuides: vm.activity.guideline[2].textGuides, subTextGuides: vm.activity.guideline[2].subTextGuides)
                         }
-
+                        NavigationLink {
+                            ConfidenceView(confidence: vm.activity.guide.confi)
+                        } label: {
+                            GuideCardView(imageGuides: vm.activity.guideline[3].imageGuides, textGuides: vm.activity.guideline[3].textGuides, subTextGuides: vm.activity.guideline[3].subTextGuides)
+                        }
+                        NavigationLink {
+                            ReflectionView(reflection: vm.activity.guide.reflect)
+                        } label: {
+                            GuideCardView(imageGuides: vm.activity.guideline[4].imageGuides, textGuides: vm.activity.guideline[4].textGuides, subTextGuides: vm.activity.guideline[4].subTextGuides)
+                        }
+                        
                         
                     }
                 })
