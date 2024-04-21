@@ -8,7 +8,10 @@
 import SwiftUI
 
 struct ThinkView: View {
+    var think: Think
     @State var note = ""
+    @State var method = ""
+    
     var body: some View {
         NavigationStack {
             ScrollView {
@@ -39,26 +42,34 @@ struct ThinkView: View {
                                         .font(.system(size: 15, weight: .regular))
                                         .foregroundStyle(.black.opacity(0.5))
                                 }
-                                
-                                ForEach(0..<6) {_ in
-                                    HStack(spacing: 15){
-                                        Circle()
-                                            .fill(Color.blue10)
-                                            .frame(width: 14)
-                                            .background {
-                                                Circle()
-                                                    .stroke(Color.pink, lineWidth: 1)
-                                                    .frame(width: 30)
-                                            }
-                                        VStack(alignment: .leading){
-                                            Text("Questioning & Curiosity")
-                                                .font(.system(size: 17, weight: .semibold))
-                                            Text("Encourage questioning and curiosity")
-                                                .font(.system(size: 16, weight: .regular))
-                                        }
-                                        Spacer()
-                                    }
+                                ForEach(think.thinkThing) { method in
+//                                ForEach(0..<6) {_ in
+//                                    HStack(spacing: 15){
+//                                        Circle()
+//                                            .fill(Color.blue10)
+//                                            .frame(width: 14)
+//                                            .background {
+//                                                Circle()
+//                                                    .stroke(Color.pink, lineWidth: 1)
+//                                                    .frame(width: 30)
+//                                            }
+//                                        VStack(alignment: .leading){
+//                                            Text("Questioning & Curiosity")
+//                                                .font(.system(size: 17, weight: .semibold))
+//                                            Text("Encourage questioning and curiosity")
+//                                                .font(.system(size: 16, weight: .regular))
+//                                        }
+//                                        Spacer()
+//                                    }
+                                    MethodRow(method: method)
                                 }
+                                HStack {
+                                    Image(systemName: "plus")
+                                        .foregroundStyle(Color.accentColor)
+                                    TextField("Add your own method", text: $method)
+                                    Spacer()
+                                }
+                                .frame(height: 30)
                             }
                             .padding(.horizontal)
                             
@@ -70,7 +81,7 @@ struct ThinkView: View {
                         .background {
                             RoundedRectangle(cornerRadius: 20)
                                 .fill(Color("guidelines-gray"))
-                                .frame(height: .infinity)
+//                                .frame(height: .infinity)
                         }
                         .padding()
                     }
@@ -85,5 +96,5 @@ struct ThinkView: View {
 }
 
 #Preview {
-    ThinkView()
+    ThinkView(think: thinkItem)
 }
