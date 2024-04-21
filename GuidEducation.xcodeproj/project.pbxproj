@@ -30,6 +30,7 @@
 		007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF12A372BE1001DB240 /* ActivityModel.swift */; };
 		007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF32A372D1E001DB240 /* ActivityCardView.swift */; };
 		00B7F70C2A37A7ED0082ED63 /* GuideCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7F70B2A37A7ED0082ED63 /* GuideCardView.swift */; };
+		00C0E4A72BD365DC0012AF5D /* ReflectionViewSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0E4A62BD365DC0012AF5D /* ReflectionViewSecond.swift */; };
 		00C669DA2A42E92F00EF8C74 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C669D92A42E92F00EF8C74 /* SwiftUIView.swift */; };
 		00CC6B5F2BCD310600E6C5A2 /* GuidelinesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC6B5E2BCD310600E6C5A2 /* GuidelinesViewModel.swift */; };
 		00CC6B612BCE527D00E6C5A2 /* GlobalVar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00CC6B602BCE527D00E6C5A2 /* GlobalVar.swift */; };
@@ -61,6 +62,7 @@
 		007A7BF12A372BE1001DB240 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		007A7BF32A372D1E001DB240 /* ActivityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardView.swift; sourceTree = "<group>"; };
 		00B7F70B2A37A7ED0082ED63 /* GuideCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCardView.swift; sourceTree = "<group>"; };
+		00C0E4A62BD365DC0012AF5D /* ReflectionViewSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionViewSecond.swift; sourceTree = "<group>"; };
 		00C669D92A42E92F00EF8C74 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		00CC6B5E2BCD310600E6C5A2 /* GuidelinesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidelinesViewModel.swift; sourceTree = "<group>"; };
 		00CC6B602BCE527D00E6C5A2 /* GlobalVar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalVar.swift; sourceTree = "<group>"; };
@@ -86,6 +88,8 @@
 				000ED9232BCFBF7700FD50EF /* CollabView.swift */,
 				000ED9272BCFC02700FD50EF /* ConfidenceView.swift */,
 				000ED9252BCFBFDC00FD50EF /* ThinkView.swift */,
+				000D50762BB428870081AB63 /* ReflectionView.swift */,
+				00C0E4A62BD365DC0012AF5D /* ReflectionViewSecond.swift */,
 			);
 			path = GuidelinesView;
 			sourceTree = "<group>";
@@ -100,7 +104,6 @@
 				003ED17B2BADCB4800775034 /* AllActivitiesView.swift */,
 				00064A342BB0440A00DB2179 /* NewActivityView.swift */,
 				00551FFC2BB402FC0017C9DB /* ReflectionResult.swift */,
-				000D50762BB428870081AB63 /* ReflectionView.swift */,
 				00CC6B622BCE9F3700E6C5A2 /* AnswerRow.swift */,
 			);
 			path = Views;
@@ -293,6 +296,7 @@
 				006FEB252A755FAC0081060D /* ColorExt.swift in Sources */,
 				00551FFB2BB402DF0017C9DB /* GuidelinesView.swift in Sources */,
 				000ED9242BCFBF7700FD50EF /* CollabView.swift in Sources */,
+				00C0E4A72BD365DC0012AF5D /* ReflectionViewSecond.swift in Sources */,
 				00551FFD2BB402FC0017C9DB /* ReflectionResult.swift in Sources */,
 				007A7BE82A3728C7001DB240 /* HomeView.swift in Sources */,
 				007A7BEC2A372924001DB240 /* ProfileView.swift in Sources */,

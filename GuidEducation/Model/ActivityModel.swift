@@ -52,6 +52,9 @@ struct Guide {
     var id: Int
     var engage: Engage
     var collab: Collab
+    var think: Think
+    var confi: Confidence
+    var reflect: Reflection
 }
 
 struct Guidelines: Identifiable {
@@ -75,7 +78,20 @@ struct Collab {
 }
 
 struct Think {
-    
+    var thinkThing: [Method]
+    var notes: String
+}
+
+struct Confidence {
+    var confiThing: [Method]
+    var notes: String
+}
+
+struct Reflection {
+    var engagement: [Method]
+    var output: [Method]
+    var assess: [Method]
+    var rate: Int
 }
 
 struct Method: Identifiable {
@@ -120,12 +136,27 @@ class ActivityData {
 
 var activity = Card.init(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ujian Akhir", "Matematika"], isTodayActivity: true)
 
-var guideItem = Guide(id: 1, engage: engageItem, collab: collabItem)
+var guideItem = Guide(id: 1, engage: engageItem, collab: collabItem, think: thinkItem, confi: confiItem, reflect: reflectionItem)
 
 var engageItem = Engage(engageAct: methodData, notes: "this notes")
 var collabItem = Collab(collabThing: [Method(id: 1, text: "Discussions", isSelected: true),
                                       Method(id: 2, text: "Activities", isSelected: false)
                                      ], collabAct: methodData, notes: "the notes")
+var thinkItem = Think(thinkThing: methodData, notes: "notess")
+var confiItem = Confidence(confiThing: methodData, notes: "notes")
+var reflectionItem = Reflection(engagement: [
+    Method(id: 1, text: "Very well, they actively participated throughout the whole activity", isSelected: false),
+    Method(id: 2, text: "Good, they showed a sign of interest and participated enough in the activity", isSelected: false),
+    Method(id: 3, text: "Poor, they didn’t seem to be interested and weren’t participating fully", isSelected: false),
+], output: [
+    Method(id: 1, text: "Very well, students were able to reach the objective of this activity that were set in the beginning of the class", isSelected: false),
+    Method(id: 2, text: "Good, students were able to gain some knowledge from this activity but didn’t reach the goal completely", isSelected: false),
+    Method(id: 3, text: "Poor, most of the students weren’t able to reach the objective of this activity", isSelected: false)
+], assess: [
+    Method(id: 1, text: "Very well, students were able to solve practical problems quickly and efficiently", isSelected: true),
+    Method(id: 2, text: "Good, although students faced some challenges but they showed positive attitude in completing the task given", isSelected: true),
+    Method(id: 3, text: "Poor, students weren’t able to complete task efficiently and didn’t show willingness to learn", isSelected: true)
+], rate: 0)
 
 var methodData: [Method] = [
     Method(id: 1, text: "Ice breaking activity", isSelected: false),
