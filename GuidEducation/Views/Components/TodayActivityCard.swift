@@ -13,7 +13,7 @@ struct TodayActivityCard: View {
     @State var card: Card
     
     var body: some View {
-        HStack(spacing: 0){
+        HStack(spacing: 10){
             Image(card.image)
                 .resizable()
                 .scaledToFit()
@@ -27,9 +27,13 @@ struct TodayActivityCard: View {
                         Image(systemName: "chevron.right")
                         .foregroundColor(.white)
                     }
-                    Text(card.deskripsi)
-                        .font(.system(size: 13, weight: .regular))
-                        .multilineTextAlignment(.leading)
+                    HStack {
+                        Text(card.deskripsi)
+                            .font(.system(size: 13, weight: .regular))
+                            .multilineTextAlignment(.leading)
+                        Spacer()
+                    }
+                    .frame(width: 260)
                 }
                 HStack {
 //              MARK: versi lain, seluruh tag
@@ -66,7 +70,7 @@ struct TodayActivityCard: View {
         }
         .foregroundColor(Color.white)
         .frame(maxWidth: .infinity)
-        .padding(8)
+        .padding(10)
         .background(Color.myBlue)
         .cornerRadius(12)
     }
