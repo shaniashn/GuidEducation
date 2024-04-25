@@ -28,7 +28,10 @@ struct TagView: View {
         .background {
             RoundedRectangle(cornerRadius: 50)
                 .stroke(Color.gray, lineWidth: 1)
-                .background(Color.white)
+                .background {
+                    RoundedRectangle(cornerRadius: 50)
+                        .foregroundStyle(Color.white)
+                }
         }
 //        .cornerRadius(10)
     }
@@ -36,6 +39,6 @@ struct TagView: View {
 
 struct TagView_Previews: PreviewProvider {
     static var previews: some View {
-        TagView(tagName: "Math-icon")
+        TagView(tagName: "Math")
     }
 }
