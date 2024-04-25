@@ -17,7 +17,7 @@ struct HomeView: View {
                     HStack {
                         VStack (alignment: .leading, spacing: 12) {
                             Text("Hello!")
-                                .font(.system(size: 34))
+                                .font(.system(size: 34, design: .rounded))
                                 .fontWeight(.bold)
                             Text("Don't forget to make your plans")
                         }
@@ -45,13 +45,12 @@ struct HomeView: View {
                             } label: {
                                 TodayActivityCard(card: act)
                             }
-                            
                         }
-                        
                     }
                     
                     HStack(content: {
                         Text("Your Activities ")
+                            .font(.system(size: 20, weight: .semibold))
                         Spacer()
                         Button(action: {
                             
@@ -66,6 +65,7 @@ struct HomeView: View {
                         }
                         
                     })
+                    .padding(.top, 20)
                     VStack(content: {
                         ForEach(vm.cards) { act in
                             ActivityCardView(card: act)
