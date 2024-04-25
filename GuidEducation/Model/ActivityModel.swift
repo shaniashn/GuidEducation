@@ -100,6 +100,11 @@ struct Method: Identifiable {
     var isSelected: Bool
 }
 
+//struct Dates {
+//    var day: String
+//    var date: Int?
+//}
+
 class ActivityData {
    static var cardData: [Card] = [
     Card (id: 1, judul: "Dinamika Litosfer", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "geology-yellow-small", tags: ["Ulangan Harian","Ujian Akhir", "Matematika", "Science"], isTodayActivity: false),
@@ -128,11 +133,17 @@ class ActivityData {
     ]
     
     static var activityData: Activity = Activity(id: "1", title: "Dinamika Litosfer", objective: "Memahami dinamika litosfer dan dampaknya terhadap kehidupan", tags: [tag], guideline: guidelinesData, guide: guideItem)
-        
     
-    
+//    static var itemDates: [Dates] = [
+//        Dates(day: "Sun"),
+//        Dates(day: "Mon"),
+//        Dates(day: "Tue"),
+//        Dates(day: "Wed"),
+//        Dates(day: "Thu"),
+//        Dates(day: "Fri"),
+//        Dates(day: "Sat")
+//    ]
 }
-
 
 var activity = Card.init(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ujian Akhir", "Matematika"], isTodayActivity: true)
 
