@@ -11,11 +11,27 @@ struct CalendarView: View {
     @EnvironmentObject var vm: ActivityViewModel
     var dateNow = Date()
     
-    var days: [String] = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
-    
     var body: some View {
-        VStack {
-            
+        HStack {
+//            ForEach(vm.getWeekOfDay(), id: \.self) { i in
+//                VStack(spacing: 10, content: {
+//                    Text(vm.formatDate(date: i, format: "EEE"))
+//                    Text(vm.formatDate(date: i, format: "dd"))
+//                    Text(vm.formatDate(date: i, format: "EEE"))
+//                        
+//                })
+//                .foregroundStyle(Color.blue)
+//                .background(content: {
+//                    Capsule()
+//                })
+//                .onTapGesture {
+//                    vm.currentDate = i
+//                }
+                
+//            }
+            ForEach(vm.getWeekOfDay(), id: \.self) { x in
+                Text("\(x.description(with: .autoupdatingCurrent))")
+            }
         }
     }
     

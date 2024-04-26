@@ -12,7 +12,8 @@ class ActivityViewModel: ObservableObject {
     @Published var tags: [Tag] = ActivityData.theTags
     @Published var activity: Activity = ActivityData.activityData
     
-//    @Published var currentWeek = []
+//    @Published var dateAWeek: [Date] = []
+    @Published var currentDate: Date = Date()
     
     init() {
         //kalo ini bisa diganti dari sumbernya yaitu ActivityData, berarti melanggar aturan MVVM krn harusnya yg boleh mengubah let activity itu cuma viewmodel
@@ -23,9 +24,8 @@ class ActivityViewModel: ObservableObject {
         self.activity = activity
     }
     
-    func getWeekOfDay() -> [DateComponents] {
-
-        var dateAWeek: [DateComponents] = []
+    func getWeekOfDay() -> [Date] {
+        var dateAWeek: [Date] = []
         let calendar = Calendar(identifier: .gregorian)
         let dateComponent = calendar.dateComponents([
             .calendar,
@@ -41,15 +41,29 @@ class ActivityViewModel: ObservableObject {
         for i in 1..<8 {
             let datePerWeek = DateComponents(year: 2024, month: monthPoint, weekday: i, weekOfMonth: weekOfMonthPoint)
             
-            let calendarPerWeek = calendar.date(from: datePerWeek)
+            if let calendarPerWeek = calendar.date(from: datePerWeek) {
+//                dateAWeek.append(calendarPerWeek)
+                dateAWeek.append(Date())
+            }
             
-            let dateNumber = Calendar.current.dateComponents([.day], from: calendarPerWeek ?? Date())
-            dateAWeek.append(dateNumber)
-//            print(calendarPerWeek)
+//            let dateNumber = Calendar.current.dateComponents([.day], from: calendarPerWeek ?? Date())
+            
+//            dateAWeek.append(dateNumber)
 //            dateAWeek.append(dateNumber.day ?? 0)
             
         }
         return dateAWeek
     }
     
+    func formatDate(date: Date, format: String) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = format
+        
+        return formatter.string(from: date)
+    }
+    
+    func isTodayDate(date: Date) {
+        let checkIsTodayDate = Calendar.current.isDateInToday(date)
+        let checkDate = Calendar.current.isDate(currentDate, inSameDayAs: date)
+    }
 }
