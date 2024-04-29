@@ -145,7 +145,7 @@ class ActivityData {
 //    ]
 }
 
-var activity = Card.init(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ujian Akhir", "Matematika"], isTodayActivity: true)
+//var activity = Card.init(id: 6, judul: "Matrix", deskripsi: "ini adalah deskripsi dari aktivitas yang akan dilakukan", image: "math-small", tags: ["Ujian Akhir", "Matematika"], isTodayActivity: true)
 
 var guideItem = Guide(id: 1, engage: engageItem, collab: collabItem, think: thinkItem, confi: confiItem, reflect: reflectionItem)
 

@@ -31,6 +31,7 @@
 		007A7BEC2A372924001DB240 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BEB2A372924001DB240 /* ProfileView.swift */; };
 		007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF12A372BE1001DB240 /* ActivityModel.swift */; };
 		007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF32A372D1E001DB240 /* ActivityCardView.swift */; };
+		00ACC4EF2BDF47110078E583 /* GuidEducationModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00ACC4ED2BDF47110078E583 /* GuidEducationModel.xcdatamodeld */; };
 		00B7F70C2A37A7ED0082ED63 /* GuideCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7F70B2A37A7ED0082ED63 /* GuideCardView.swift */; };
 		00C0E4A72BD365DC0012AF5D /* ReflectionViewSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0E4A62BD365DC0012AF5D /* ReflectionViewSecond.swift */; };
 		00C669DA2A42E92F00EF8C74 /* ChooseTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C669D92A42E92F00EF8C74 /* ChooseTagView.swift */; };
@@ -65,6 +66,7 @@
 		007A7BEB2A372924001DB240 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		007A7BF12A372BE1001DB240 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		007A7BF32A372D1E001DB240 /* ActivityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardView.swift; sourceTree = "<group>"; };
+		00ACC4EE2BDF47110078E583 /* GuidEducationModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuidEducationModel.xcdatamodel; sourceTree = "<group>"; };
 		00B7F70B2A37A7ED0082ED63 /* GuideCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCardView.swift; sourceTree = "<group>"; };
 		00C0E4A62BD365DC0012AF5D /* ReflectionViewSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionViewSecond.swift; sourceTree = "<group>"; };
 		00C669D92A42E92F00EF8C74 /* ChooseTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTagView.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				007A7BF12A372BE1001DB240 /* ActivityModel.swift */,
 				00CC6B602BCE527D00E6C5A2 /* GlobalVar.swift */,
+				00ACC4ED2BDF47110078E583 /* GuidEducationModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -317,6 +320,7 @@
 				002C2AB72BD98B1600A14792 /* WrapHStack.swift in Sources */,
 				00B7F70C2A37A7ED0082ED63 /* GuideCardView.swift in Sources */,
 				00694D6B2BA9CA8B008E116E /* ActivityViewModel.swift in Sources */,
+				00ACC4EF2BDF47110078E583 /* GuidEducationModel.xcdatamodeld in Sources */,
 				002C2AB92BDA11C300A14792 /* CalendarView.swift in Sources */,
 				00064A352BB0440A00DB2179 /* NewActivityView.swift in Sources */,
 				007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */,
@@ -525,6 +529,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		00ACC4ED2BDF47110078E583 /* GuidEducationModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				00ACC4EE2BDF47110078E583 /* GuidEducationModel.xcdatamodel */,
+			);
+			currentVersion = 00ACC4EE2BDF47110078E583 /* GuidEducationModel.xcdatamodel */;
+			name = GuidEducationModel.xcdatamodeld;
+			path = /Users/shaniasiahaan/Documents/latihan/latihan/GuidEducation/GuidEducation/Model/GuidEducationModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 007A7BCE2A372895001DB240 /* Project object */;
 }
