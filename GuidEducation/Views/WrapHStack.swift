@@ -12,6 +12,38 @@ struct WrapHStack: View {
     
     var body: some View {
         TagsView(items: words)
+//        VStack {
+//            Text("Five stars")
+//              .background(Color.yellow)
+//              .font(.system(size: 90))
+//              .fixedSize()
+//              .border(Color.blue)
+//              .frame(width: 200, height: 100)
+//              .border(Color.red)
+//        }
+//        .background(Color.orange)
+        
+        
+//        VStack {
+//            Menu("Edit") {
+//                Button("Scribble tool", systemImage: "scribble.variable") {
+//                    
+//                }
+//                ControlGroup(content: {
+//                    Button("Add item", systemImage: "eyedropper.full") {
+//                        
+//                    }
+//                    Button("Change contrast", systemImage: "circle.lefthalf.fill") {
+//                        
+//                    }
+//                })
+//                Button("Erase", systemImage: "eraser.fill") {
+//                    
+//                }
+//                
+//            }
+//
+//        }
     }
 }
 
