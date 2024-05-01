@@ -38,37 +38,6 @@ struct GuideCardView: View {
     
     
     var body: some View {
-//        ZStack {
-//            RoundedRectangle(cornerRadius: 12)
-//            .fill(Color("guidelines-yellow"))
-//            .frame(minWidth: 358, maxWidth: .infinity, minHeight: 82, maxHeight: 82)
-//            .clipShape(.rect(cornerRadius: 12, style: .continuous))
-//            .overlay {
-//                HStack(){
-//                    Image("guide-img1")
-//                        .mask {
-//                            maskRect
-//                        }
-//                        
-//                    Spacer()
-//                }
-//            }
-//            HStack {
-//                Spacer()
-//                Text("Create activity that engage learners")
-//                    .font(.system(size: 17, weight: .bold))
-//                    .frame(width: 250)
-//                NavigationLink {
-//                    
-//                } label: {
-//                    Image(systemName: "chevron.right")
-//                        .foregroundStyle(Color.black)
-//                }
-//            }
-//            .padding(.trailing)
-//            
-//        }
- 
         ZStack {
             RoundedRectangle(cornerRadius: 12)
             .fill(Color("guidelines-yellow"))
@@ -80,7 +49,6 @@ struct GuideCardView: View {
                         .mask {
                             maskRect
                         }
-                        
                     Spacer()
                 }
             }
@@ -97,7 +65,6 @@ struct GuideCardView: View {
                             .foregroundStyle(.black)
                     }
                     .multilineTextAlignment(.leading)
-//                        .background(Color.pink)
                     Spacer()
                     Image(systemName: "chevron.right")
                         .foregroundStyle(Color.black)
@@ -109,7 +76,6 @@ struct GuideCardView: View {
                 }
                 .frame(width: 205)
                 .padding(.trailing)
-//                .background(Color.gray)
             }
             
         }
@@ -126,8 +92,8 @@ extension GuideCardView {
     }
 }
 
-//struct Guidelines_Previews: PreviewProvider {
-//    static var previews: some View {
-//        GuideCardView(imageGuides: <#String#>, textGuides: <#String#>, subTextGuides: <#String#>)
-//    }
-//}
+struct Guidelines_Previews: PreviewProvider {
+    static var previews: some View {
+        GuideCardView(imageGuides: "guide-img1", textGuides: "Create activity that engage learners", subTextGuides: "Choose activity that you will use")
+    }
+}
