@@ -32,11 +32,13 @@ struct HomeView: View {
                     }
                     
                     ZStack {
-                        Rectangle()
-                            .stroke(Color.black)
-                            .frame(width: 358, height: 120)
-                        
-                        Text("Insert Calendar Here")
+//                        Rectangle()
+//                            .stroke(Color.black)
+//                            .frame(width: 358, height: 120)
+//                        
+//                        Text("Insert Calendar Here")
+                        CalendarView()
+                            .padding(.vertical)
                     }
                     VStack {
                         ForEach(vm.cards) { act in
@@ -52,12 +54,6 @@ struct HomeView: View {
                         Text("Your Activities ")
                             .font(.system(size: 20, weight: .semibold))
                         Spacer()
-                        Button(action: {
-                            
-                        }, label: {
-                            
-                        })
-                        
                         NavigationLink {
                             AllActivitiesView()
                         } label: {
