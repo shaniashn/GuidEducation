@@ -6,33 +6,75 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct CalendarView: View {
     @EnvironmentObject var vm: ActivityViewModel
     var dateNow = Date()
     
     var body: some View {
-        HStack {
-//            ForEach(vm.getWeekOfDay(), id: \.self) { i in
-//                VStack(spacing: 10, content: {
-//                    Text(vm.formatDate(date: i, format: "EEE"))
-//                    Text(vm.formatDate(date: i, format: "dd"))
-//                    Text(vm.formatDate(date: i, format: "EEE"))
-//                        
-//                })
-//                .foregroundStyle(Color.blue)
-//                .background(content: {
-//                    Capsule()
-//                })
-//                .onTapGesture {
-//                    vm.currentDate = i
-//                }
-                
-//            }
-            ForEach(vm.getWeekOfDay(), id: \.self) { x in
-                Text("\(x.description(with: .autoupdatingCurrent))")
+        VStack {
+            HStack(spacing: 10){
+                Text("April")
+                    .fontWeight(.semibold)
+//                    .background(Color.orange)
+                Button(action: {
+                    let pp = UICalendarView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+                    pp.backgroundColor = .blue
+                    
+                }, label: {
+                    Image(systemName: "chevron.down")
+                })
+//                .background(Color.blue)
+            }
+            .padding(.bottom, 5)
+            HStack {
+                Button {
+                    vm.getPrevWeek()
+                } label: {
+                    Image(systemName: "chevron.left")
+                }
+                Spacer()
+                HStack(spacing: 15){
+    //                ForEach(vm.getWeekOfDay(), id: \.self) { i in
+                    ForEach(vm.dateAWeek, id: \.self) { i in //versi 2
+                        VStack(spacing: 15, content: {
+                            Text(vm.formatDate(date: i, format: "E"))
+                            Text(vm.formatDate(date: i, format: "dd"))
+                                .background { vm.makeTodayDate(date: i) ? Color.pink : Color.clear
+//                                        .frame(width: 35, height: 35)
+    //                                    .clipped()
+                                }
+                            
+                        })
+                        
+    //                    .background(content: {
+    //                        Capsule()
+    //                    })
+                        .onTapGesture {
+                            vm.currentDate = i
+                        }
+                        
+                                    }
+    //                ForEach(vm.getWeekOfDay(), id: \.self) { x in
+    //                    Text("\(x.description(with: .autoupdatingCurrent))")
+    //                }
+                }
+                Spacer()
+                Button {
+                    vm.getNextWeek()
+                } label: {
+                    Image(systemName: "chevron.right")
+                }
+
             }
         }
+//        .padding()
+        .frame(maxWidth: .infinity)
+//        .frame(height: 100)
+//        .background(Color.gray)
+//        .padding()
+        .foregroundStyle(Color.black)
     }
     
     
