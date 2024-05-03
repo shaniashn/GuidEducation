@@ -29,7 +29,7 @@ struct Activity: Identifiable {
     var objective: String
 //    var date: Date
     var tags: [Tag]
-    var guideline: [Guidelines]
+    var guideline: [Guidelines] //cuma buat card
     var guide: Guide
 //    var answer: String
 //    var engage: Engage
