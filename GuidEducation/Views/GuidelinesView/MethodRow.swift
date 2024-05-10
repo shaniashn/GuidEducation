@@ -28,6 +28,6 @@ struct MethodRow: View {
     }
 }
 
-//#Preview {
-//    MethodRow()
-//}
+#Preview {
+    MethodRow(method: Method(id: 1, text: "Discussions", isSelected: true))
+}
