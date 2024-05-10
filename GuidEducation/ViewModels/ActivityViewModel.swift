@@ -6,8 +6,27 @@
 //
 
 import Foundation
+import CoreData
+
+class ActivityManager {
+    static let shared = ActivityManager()
+    let container: NSPersistentContainer
+    let context: NSManagedObjectContext
+    
+    init() {
+        container = NSPersistentContainer(name: "")
+        container.loadPersistentStores { (description, error) in
+            if let error = error {
+                fatalError("Error loading CoreData. \(error)")
+            }
+        }
+        context = container.viewContext
+    }
+}
 
 class ActivityViewModel: ObservableObject {
+    let manager = ActivityManager.shared
+    
     @Published var cards: [Card] = ActivityData.cardData
     @Published var tags: [Tag] = ActivityData.theTags
     @Published var activity: Activity = ActivityData.activityData
@@ -17,6 +36,8 @@ class ActivityViewModel: ObservableObject {
     
     @Published var weekOfMonthPointt = 1
     
+    @Published var activities: [ActivityEntity] = []
+    
     init() {
         //kalo ini bisa diganti dari sumbernya yaitu ActivityData, berarti melanggar aturan MVVM krn harusnya yg boleh mengubah let activity itu cuma viewmodel
 //        let cards = ActivityData.cardData
@@ -24,6 +45,7 @@ class ActivityViewModel: ObservableObject {
         self.cards = cards
         self.tags = tags
         self.activity = activity
+        fetchRequest()
         getWeekOfDay()
     }
     
@@ -128,5 +150,24 @@ class ActivityViewModel: ObservableObject {
 //        let checkIsTodayDate = Calendar.current.isDateInToday(date)
         let checkDate = Calendar.current.isDate(currentDate, inSameDayAs: date)
         return checkDate
+    }
+    
+    func fetchRequest() {
+        let request = NSFetchRequest<ActivityEntity>(entityName: "Activity")
+        
+        do {
+            activities = try manager.context.fetch(request)
+        } catch let error as NSError {
+            print("Can't fetch data. \(error)")
+        }
+    }
+    
+    func saveItems() {
+        do {
+            try manager.context.save()
+        } catch {
+            let nsError = error as NSError
+            fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
+        }
     }
 }
