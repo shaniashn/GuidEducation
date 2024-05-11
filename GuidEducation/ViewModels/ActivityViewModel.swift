@@ -45,7 +45,7 @@ class ActivityViewModel: ObservableObject {
         self.cards = cards
         self.tags = tags
         self.activity = activity
-        fetchRequest()
+//        fetchRequest()
         getWeekOfDay()
     }
     
@@ -152,14 +152,19 @@ class ActivityViewModel: ObservableObject {
         return checkDate
     }
     
-    func fetchRequest() {
-        let request = NSFetchRequest<ActivityEntity>(entityName: "Activity")
-        
-        do {
-            activities = try manager.context.fetch(request)
-        } catch let error as NSError {
-            print("Can't fetch data. \(error)")
-        }
+//    func fetchRequest() {
+//        let request = NSFetchRequest<ActivityEntity>(entityName: "Activity")
+//        
+//        do {
+//            activities = try manager.context.fetch(request)
+//        } catch let error as NSError {
+//            print("Can't fetch data. \(error)")
+//        }
+//    }
+    
+    func addItem(){
+        guard let entityMethod = NSEntityDescription.entity(forEntityName: "", in: manager.context) else { return }
+        let objMethod = NSManagedObject(entity: entityMethod, insertInto: manager.context)
     }
     
     func saveItems() {
