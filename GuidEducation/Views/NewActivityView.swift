@@ -34,6 +34,7 @@ struct NewActivityView: View {
     
     @State var activityTitle = ""
     @State var activityObjective = ""
+    @State var actTemp: Activity?
     
     var body: some View {
         NavigationStack {
@@ -129,30 +130,34 @@ struct NewActivityView: View {
 //                            }
 //                        }
                         NavigationLink {
-                            EngageView(engage: vm.activity.guide.engage)
+                            EngageView(engage: vm.activity.guide!.engage)
                         } label: {
                             GuideCardView(imageGuides: vm.activity.guideline[0].imageGuides, textGuides: vm.activity.guideline[0].textGuides, subTextGuides: vm.activity.guideline[0].subTextGuides)
                         }
+                        .onTapGesture {
+                            vm.addActivity(title: activityTitle, obj: activityObjective, tag: [])
+                        }
+                        
                         NavigationLink {
-                            CollabView(collab: vm.activity.guide.collab)
+                            CollabView(collab: vm.activity.guide!.collab)
                         } label: {
                             GuideCardView(imageGuides: vm.activity.guideline[1].imageGuides, textGuides: vm.activity.guideline[1].textGuides, subTextGuides: vm.activity.guideline[1].subTextGuides)
                         }
-                        NavigationLink {
-                            ThinkView(think: vm.activity.guide.think)
-                        } label: {
-                            GuideCardView(imageGuides: vm.activity.guideline[2].imageGuides, textGuides: vm.activity.guideline[2].textGuides, subTextGuides: vm.activity.guideline[2].subTextGuides)
-                        }
-                        NavigationLink {
-                            ConfidenceView(confidence: vm.activity.guide.confi)
-                        } label: {
-                            GuideCardView(imageGuides: vm.activity.guideline[3].imageGuides, textGuides: vm.activity.guideline[3].textGuides, subTextGuides: vm.activity.guideline[3].subTextGuides)
-                        }
-                        NavigationLink {
-                            ReflectionView(reflection: vm.activity.guide.reflect)
-                        } label: {
-                            GuideCardView(imageGuides: vm.activity.guideline[4].imageGuides, textGuides: vm.activity.guideline[4].textGuides, subTextGuides: vm.activity.guideline[4].subTextGuides)
-                        }
+//                        NavigationLink {
+//                            ThinkView(think: vm.activity.guide.think)
+//                        } label: {
+//                            GuideCardView(imageGuides: vm.activity.guideline[2].imageGuides, textGuides: vm.activity.guideline[2].textGuides, subTextGuides: vm.activity.guideline[2].subTextGuides)
+//                        }
+//                        NavigationLink {
+//                            ConfidenceView(confidence: vm.activity.guide.confi)
+//                        } label: {
+//                            GuideCardView(imageGuides: vm.activity.guideline[3].imageGuides, textGuides: vm.activity.guideline[3].textGuides, subTextGuides: vm.activity.guideline[3].subTextGuides)
+//                        }
+//                        NavigationLink {
+//                            ReflectionView(reflection: vm.activity.guide.reflect)
+//                        } label: {
+//                            GuideCardView(imageGuides: vm.activity.guideline[4].imageGuides, textGuides: vm.activity.guideline[4].textGuides, subTextGuides: vm.activity.guideline[4].subTextGuides)
+//                        }
                         
                         
                     }
