@@ -14,7 +14,7 @@ class ActivityManager {
     let context: NSManagedObjectContext
     
     init() {
-        container = NSPersistentContainer(name: "")
+        container = NSPersistentContainer(name: "GuidEducationModel")
         container.loadPersistentStores { (description, error) in
             if let error = error {
                 fatalError("Error loading CoreData. \(error)")
@@ -37,6 +37,8 @@ class ActivityViewModel: ObservableObject {
     @Published var weekOfMonthPointt = 1
     
     @Published var activities: [ActivityEntity] = []
+    @Published var methods: [MethodEntity]?
+    @Published var engages: Engage = engageItem
     
     init() {
         //kalo ini bisa diganti dari sumbernya yaitu ActivityData, berarti melanggar aturan MVVM krn harusnya yg boleh mengubah let activity itu cuma viewmodel
@@ -45,8 +47,10 @@ class ActivityViewModel: ObservableObject {
         self.cards = cards
         self.tags = tags
         self.activity = activity
-//        fetchRequest()
-        getWeekOfDay()
+        fetchRequest()
+//        getWeekOfDay()
+//        self.methods = engages.engageAct
+        
     }
     
 //      MARK: - Versi 1
@@ -152,19 +156,37 @@ class ActivityViewModel: ObservableObject {
         return checkDate
     }
     
-//    func fetchRequest() {
-//        let request = NSFetchRequest<ActivityEntity>(entityName: "Activity")
+    func fetchRequest() {
+        let request = NSFetchRequest<ActivityEntity>(entityName: "ActivityEntity")
+        let requestMethod = NSFetchRequest<MethodEntity>(entityName: "MethodEntity")
+        
+        do {
+            activities = try manager.context.fetch(request)
+//            methods = try manager.context.fetch(requestMethod)
+        } catch let error as NSError {
+            print("Can't fetch data. \(error)")
+        }
+    }
+    
+//    func addItem(){
+//        guard let entityActivity = NSEntityDescription.entity(forEntityName: "", in: manager.context) else { return }
+//        guard let entityMethod = NSEntityDescription.entity(forEntityName: "", in: manager.context) else { return }
+//        let objActivity = NSManagedObject(entity: entityActivity, insertInto: manager.context)
+//        let objMethod = NSManagedObject(entity: entityMethod, insertInto: manager.context)
 //        
-//        do {
-//            activities = try manager.context.fetch(request)
-//        } catch let error as NSError {
-//            print("Can't fetch data. \(error)")
-//        }
+//        
+//        
 //    }
     
-    func addItem(){
-        guard let entityMethod = NSEntityDescription.entity(forEntityName: "", in: manager.context) else { return }
-        let objMethod = NSManagedObject(entity: entityMethod, insertInto: manager.context)
+    func addToMethodList(text: String, methods: [Method]) {
+        
+        
+    }
+    
+    func addActivity(title: String, obj: String, tag: [Tag]) {
+        guard let entityActivity = NSEntityDescription.entity(forEntityName: "ActivityEntity", in: manager.context) else { return }
+        let objActivity = NSManagedObject(entity: entityActivity, insertInto: manager.context)
+        objActivity.setValue(title, forKeyPath: "title")
     }
     
     func saveItems() {
@@ -175,4 +197,8 @@ class ActivityViewModel: ObservableObject {
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
     }
+}
+
+class ActivityEntityManager {
+    
 }
