@@ -6,6 +6,7 @@
         <relationship name="guide" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GuideEntity" inverseName="activities" inverseEntity="GuideEntity"/>
     </entity>
     <entity name="EngageEntity" representedClassName="EngageEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="notes" optional="YES" attributeType="String"/>
         <relationship name="guides" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="GuideEntity" inverseName="engage" inverseEntity="GuideEntity"/>
         <relationship name="methods" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MethodEntity" inverseName="engages" inverseEntity="MethodEntity"/>
