@@ -8,9 +8,16 @@
 import SwiftUI
 
 struct EngageView: View {
+    @EnvironmentObject var vm: ActivityViewModel
+    
     @State var note = ""
     @State var method: String = ""
     @State var engage: Engage
+    @State var methodTemp: [Method] = [
+        Method(id: 1, text: "Ice breaking activity", isSelected: false),
+        Method(id: 2, text: "Give analogy", isSelected: false),
+        Method(id: 3, text: "Real case study", isSelected: true)
+    ]
     
     var body: some View {
         NavigationStack {
@@ -41,14 +48,39 @@ struct EngageView: View {
                                         .font(.system(size: 15, weight: .regular))
                                         .foregroundStyle(.black.opacity(0.5))
                                 }
-                                ForEach(engage.engageAct) { method in
-                                    MethodRow(method: method)
+//                                ForEach(engage.engageAct) { method in
+//                                    MethodRow(method: method)
+//                                }
+                                ForEach(methodTemp) { met in
+                                    MethodRow(method: met)
                                 }
                                 HStack {
-                                    Image(systemName: "plus")
-                                        .foregroundStyle(Color.accentColor)
+                                    Button {
+                                        let baru = Method(id: 5, text: "\(method)", isSelected: true)
+//                                        func addMthd() {
+//                                            engage.engageAct.append(baru)
+//                                        }
+                                        methodTemp.append(baru)
+                                    } label: {
+                                        Image(systemName: "plus")
+                                            .foregroundStyle(Color.accentColor)
+                                    }
+                                    
+                                    
                                     TextField("Add your own method", text: $method)
-                                    Spacer()
+//                                    Spacer()
+                                    
+//                                    Button {
+//                                        
+//                                    } label: {
+//                                        Text("Add")
+//                                            .padding(6)
+//                                            .background {
+//                                                Color.gray.opacity(0.3)
+//                                            }
+//                                    }
+                                    
+                                    
                                 }
                                 .frame(height: 30)
                             }
@@ -72,10 +104,22 @@ struct EngageView: View {
             .background(Color("guidelines-yellow"))
             .navigationTitle("Activity Framework")
             .navigationBarTitleDisplayMode(.inline)
+            .toolbar {
+                ToolbarItem(placement: .confirmationAction) {
+                    Button {
+//                        let enggg = Engage(engageAct: engage.engageAct, notes: note)
+                        vm.addToMethodList(text: "\(note)", methods: methodTemp)
+                    } label: {
+                        Text("Save")
+                    }
+
+                }
+            }
         }
     }
 }
 
 #Preview {
     EngageView(engage: engageItem)
+        .environmentObject(ActivityViewModel())
 }
