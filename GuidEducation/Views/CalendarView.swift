@@ -41,16 +41,15 @@ struct CalendarView: View {
                         VStack(spacing: 15, content: {
                             Text(vm.formatDate(date: i, format: "E"))
                             Text(vm.formatDate(date: i, format: "dd"))
-                                .background { vm.makeTodayDate(date: i) ? Color.pink : Color.clear
+                                .background { Circle()
+                                        .fill(vm.makeTodayDate(date: i) ? Color("guidelines-bluelight") : Color.clear)
+                                        .frame(width: 35, height: 35)
 //                                        .frame(width: 35, height: 35)
     //                                    .clipped()
                                 }
                             
                         })
                         
-    //                    .background(content: {
-    //                        Capsule()
-    //                    })
                         .onTapGesture {
                             vm.currentDate = i
                         }

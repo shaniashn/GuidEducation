@@ -48,7 +48,7 @@ class ActivityViewModel: ObservableObject {
         self.tags = tags
         self.activity = activity
         fetchRequest()
-//        getWeekOfDay()
+        getWeekOfDay()
 //        self.methods = engages.engageAct
         
     }
