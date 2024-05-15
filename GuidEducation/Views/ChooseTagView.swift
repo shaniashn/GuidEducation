@@ -8,11 +8,12 @@
 import SwiftUI
 
 struct ChooseTagView: View {
-    var items: [String]
+    @Environment(\.dismiss) var dismiss
+    var items: [String] /*= ["Ulangan Harian", "Math", "Sejarah", "Biology", "Chemistry", "Economy", "Art", "English", "Geography", "Socio"]*/
     var groupedItems: [[String]] = [[String]]()
     var screenWidth = UIScreen.main.bounds.size.width
     
-    init(items: [String]) {
+    init(items: [String] = ["Ulangan Harian", "Math", "Sejarah", "Biology", "Chemistry", "Economy", "Art", "English", "Geography", "Socio"]) {
         self.items = items
         self.groupedItems = createGroupdItems(items)
     }
