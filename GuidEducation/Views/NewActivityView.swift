@@ -35,6 +35,7 @@ struct NewActivityView: View {
     @State var activityTitle = ""
     @State var activityObjective = ""
     @State var actTemp: Activity?
+    @State var showTagView: Bool = false
     
     var body: some View {
         NavigationStack {
@@ -88,7 +89,7 @@ struct NewActivityView: View {
                         
                         
                         Button(action: {
-                            
+                            showTagView.toggle()
                         }, label: {
                             HStack {
                                 Image(systemName: "tag")
@@ -104,6 +105,11 @@ struct NewActivityView: View {
                                     .background(Color.white)
                             }
                         })
+                        .sheet(isPresented: $showTagView) {
+                            ChooseTagView()
+                                .presentationDetents([.medium, .fraction(2)])
+                        }
+                        
                     })
                     .padding(.vertical, 15)
                     
@@ -134,32 +140,34 @@ struct NewActivityView: View {
                         } label: {
                             GuideCardView(imageGuides: vm.activity.guideline[0].imageGuides, textGuides: vm.activity.guideline[0].textGuides, subTextGuides: vm.activity.guideline[0].subTextGuides)
                         }
-                        .onTapGesture {
-                            vm.addActivity(title: activityTitle, obj: activityObjective, tag: [])
-                        }
                         
-                        NavigationLink {
-                            CollabView(collab: vm.activity.guide!.collab)
-                        } label: {
-                            GuideCardView(imageGuides: vm.activity.guideline[1].imageGuides, textGuides: vm.activity.guideline[1].textGuides, subTextGuides: vm.activity.guideline[1].subTextGuides)
-                        }
+                        
 //                        NavigationLink {
-//                            ThinkView(think: vm.activity.guide.think)
+//                            CollabView(collab: vm.activity.guide!.collab)
+//                        } label: {
+//                            GuideCardView(imageGuides: vm.activity.guideline[1].imageGuides, textGuides: vm.activity.guideline[1].textGuides, subTextGuides: vm.activity.guideline[1].subTextGuides)
+//                        }
+//                        NavigationLink {
+//                            ThinkView(think: vm.activity.guide!.think)
 //                        } label: {
 //                            GuideCardView(imageGuides: vm.activity.guideline[2].imageGuides, textGuides: vm.activity.guideline[2].textGuides, subTextGuides: vm.activity.guideline[2].subTextGuides)
 //                        }
 //                        NavigationLink {
-//                            ConfidenceView(confidence: vm.activity.guide.confi)
+//                            ConfidenceView(confidence: vm.activity.guide!.confi)
 //                        } label: {
 //                            GuideCardView(imageGuides: vm.activity.guideline[3].imageGuides, textGuides: vm.activity.guideline[3].textGuides, subTextGuides: vm.activity.guideline[3].subTextGuides)
 //                        }
 //                        NavigationLink {
-//                            ReflectionView(reflection: vm.activity.guide.reflect)
+//                            ReflectionView(reflection: vm.activity.guide!.reflect)
 //                        } label: {
 //                            GuideCardView(imageGuides: vm.activity.guideline[4].imageGuides, textGuides: vm.activity.guideline[4].textGuides, subTextGuides: vm.activity.guideline[4].subTextGuides)
 //                        }
                         
                         
+                    }
+                    .onTapGesture {
+                        print("debug")
+                        vm.addActivity(title: activityTitle, obj: activityObjective, tag: [])
                     }
                 })
                 .navigationTitle("Your Activity")
