@@ -9,15 +9,24 @@ import SwiftUI
 
 @main
 struct GuidEducationApp: App {
+    @StateObject var router = Router()
     @StateObject var vm = ActivityViewModel()
-//    @StateObject var gvm = GuidelinesViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            HomeView()
-                .environmentObject(vm)
-//                .environmentObject(gvm)
-            
-//            ReflectionView()
+            NavigationStack(path: $router.paths) {
+                HomeView()
+                    .navigationDestination(for: Screen.self) { screen in
+                        switch(screen) {
+                        case .newActive:
+                            NewActive()
+//                        case .homeView:
+//                            HomeView()
+                        }
+                    }
+            }
+            .environmentObject(router)
+            .environmentObject(vm)
         }
     }
 }

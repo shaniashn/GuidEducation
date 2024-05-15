@@ -32,6 +32,9 @@
 		007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF12A372BE1001DB240 /* ActivityModel.swift */; };
 		007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF32A372D1E001DB240 /* ActivityCardView.swift */; };
 		00ACC4EF2BDF47110078E583 /* GuidEducationModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00ACC4ED2BDF47110078E583 /* GuidEducationModel.xcdatamodeld */; };
+		00AF37FF2BF4DD9C00B53E39 /* NewActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AF37FE2BF4DD9C00B53E39 /* NewActive.swift */; };
+		00AF38012BF4E09000B53E39 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AF38002BF4E09000B53E39 /* Router.swift */; };
+		00AF38052BF4EF1D00B53E39 /* ListGuidelinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AF38042BF4EF1D00B53E39 /* ListGuidelinesView.swift */; };
 		00B7F70C2A37A7ED0082ED63 /* GuideCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00B7F70B2A37A7ED0082ED63 /* GuideCardView.swift */; };
 		00C0E4A72BD365DC0012AF5D /* ReflectionViewSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C0E4A62BD365DC0012AF5D /* ReflectionViewSecond.swift */; };
 		00C669DA2A42E92F00EF8C74 /* ChooseTagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00C669D92A42E92F00EF8C74 /* ChooseTagView.swift */; };
@@ -67,6 +70,9 @@
 		007A7BF12A372BE1001DB240 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		007A7BF32A372D1E001DB240 /* ActivityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardView.swift; sourceTree = "<group>"; };
 		00ACC4EE2BDF47110078E583 /* GuidEducationModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuidEducationModel.xcdatamodel; sourceTree = "<group>"; };
+		00AF37FE2BF4DD9C00B53E39 /* NewActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActive.swift; sourceTree = "<group>"; };
+		00AF38002BF4E09000B53E39 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		00AF38042BF4EF1D00B53E39 /* ListGuidelinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGuidelinesView.swift; sourceTree = "<group>"; };
 		00B7F70B2A37A7ED0082ED63 /* GuideCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideCardView.swift; sourceTree = "<group>"; };
 		00C0E4A62BD365DC0012AF5D /* ReflectionViewSecond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReflectionViewSecond.swift; sourceTree = "<group>"; };
 		00C669D92A42E92F00EF8C74 /* ChooseTagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseTagView.swift; sourceTree = "<group>"; };
@@ -110,7 +116,9 @@
 				003ED17B2BADCB4800775034 /* AllActivitiesView.swift */,
 				00C669D92A42E92F00EF8C74 /* ChooseTagView.swift */,
 				00064A342BB0440A00DB2179 /* NewActivityView.swift */,
+				00AF37FE2BF4DD9C00B53E39 /* NewActive.swift */,
 				00551FFC2BB402FC0017C9DB /* ReflectionResult.swift */,
+				00AF38042BF4EF1D00B53E39 /* ListGuidelinesView.swift */,
 				002C2AB82BDA11C300A14792 /* CalendarView.swift */,
 				00CC6B622BCE9F3700E6C5A2 /* AnswerRow.swift */,
 				002C2AB62BD98B1600A14792 /* WrapHStack.swift */,
@@ -131,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				007A7BD92A372895001DB240 /* GuidEducationApp.swift */,
+				00AF38002BF4E09000B53E39 /* Router.swift */,
 				007A7BDB2A372895001DB240 /* ContentView.swift */,
 				007A7BE72A3728C6001DB240 /* HomeView.swift */,
 			);
@@ -303,6 +312,7 @@
 				00CC6B612BCE527D00E6C5A2 /* GlobalVar.swift in Sources */,
 				000ED92A2BD00A8600FD50EF /* MethodRow.swift in Sources */,
 				006FEB252A755FAC0081060D /* ColorExt.swift in Sources */,
+				00AF38012BF4E09000B53E39 /* Router.swift in Sources */,
 				00551FFB2BB402DF0017C9DB /* GuidelinesView.swift in Sources */,
 				000ED9242BCFBF7700FD50EF /* CollabView.swift in Sources */,
 				00C0E4A72BD365DC0012AF5D /* ReflectionViewSecond.swift in Sources */,
@@ -310,11 +320,13 @@
 				007A7BE82A3728C7001DB240 /* HomeView.swift in Sources */,
 				007A7BEC2A372924001DB240 /* ProfileView.swift in Sources */,
 				00CC6B5F2BCD310600E6C5A2 /* GuidelinesViewModel.swift in Sources */,
+				00AF37FF2BF4DD9C00B53E39 /* NewActive.swift in Sources */,
 				006FEB1E2A753B8B0081060D /* TodayActivityCard.swift in Sources */,
 				000ED9222BCFBE3E00FD50EF /* EngageView.swift in Sources */,
 				007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */,
 				002BCB2A2A7A9847003C9ED4 /* TagView.swift in Sources */,
 				003ED17C2BADCB4800775034 /* AllActivitiesView.swift in Sources */,
+				00AF38052BF4EF1D00B53E39 /* ListGuidelinesView.swift in Sources */,
 				00C669DA2A42E92F00EF8C74 /* ChooseTagView.swift in Sources */,
 				000ED9282BCFC02700FD50EF /* ConfidenceView.swift in Sources */,
 				002C2AB72BD98B1600A14792 /* WrapHStack.swift in Sources */,
