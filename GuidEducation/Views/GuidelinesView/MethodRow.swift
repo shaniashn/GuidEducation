@@ -19,7 +19,7 @@ struct MethodRow: View {
                 .background {
                     Circle()
                         .stroke(Color("gray10"), lineWidth: 1.5)
-                        .frame(width: 16)
+                        .frame(width: 14)
                 }
             Text(method.text)
             Spacer()
