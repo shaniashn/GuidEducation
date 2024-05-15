@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var vm: ActivityViewModel
+//    @EnvironmentObject var vm: ActivityViewModel
+    @EnvironmentObject var router: Router
     
     var body: some View {
-        NavigationStack {
+//        NavigationStack {
+        VStack {
                 VStack(alignment: .leading) {
                     ScrollView {
                     HStack {
@@ -22,13 +24,24 @@ struct HomeView: View {
                             Text("Don't forget to make your plans")
                         }
                         Spacer()
-                        NavigationLink(destination: NewActivityView()){
+//                        NavigationLink(destination: NewActivityView()){
+//                            Image(systemName: "plus")
+//                                .resizable()
+//                                .scaledToFit()
+//                                .frame(width: 22, height: 22)
+//                                .padding()
+//                        }
+                        Button(action: {
+                            print("wtf is going on")
+                            router.addToPath(screen: .newActive)
+//                            NewActive()
+                        }, label: {
                             Image(systemName: "plus")
                                 .resizable()
                                 .scaledToFit()
                                 .frame(width: 22, height: 22)
                                 .padding()
-                        }
+                        })
                     }
                     
                     ZStack {
@@ -41,13 +54,13 @@ struct HomeView: View {
                             .padding(.vertical)
                     }
                     VStack {
-                        ForEach(vm.cards) { act in
-                            Button {
-                                
-                            } label: {
-                                TodayActivityCard(card: act)
-                            }
-                        }
+//                        ForEach(vm.cards) { act in
+//                            Button {
+//                                
+//                            } label: {
+//                                TodayActivityCard(card: act)
+//                            }
+//                        }
                     }
                     
                     HStack(content: {
@@ -63,9 +76,9 @@ struct HomeView: View {
                     })
                     .padding(.top, 20)
                     VStack(content: {
-                        ForEach(vm.cards) { act in
-                            ActivityCardView(card: act)
-                        }
+//                        ForEach(vm.cards) { act in
+//                            ActivityCardView(card: act)
+//                        }
                     })
                 }
                 .scrollIndicators(.hidden)
@@ -78,9 +91,9 @@ struct HomeView: View {
     }
 }
 
-struct Home_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-            .environmentObject(ActivityViewModel())
-    }
-}
+//struct Home_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//            .environmentObject(ActivityViewModel())
+//    }
+//}
