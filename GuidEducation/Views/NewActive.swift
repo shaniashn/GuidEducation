@@ -10,6 +10,7 @@ import SwiftUI
 struct NewActive: View {
     
     @EnvironmentObject var vm: ActivityViewModel
+    @EnvironmentObject var router: Router
     @State var activityTitle = ""
     @State var activityObjective = ""
     @State var showTagView: Bool = false
@@ -106,6 +107,8 @@ struct NewActive: View {
             Spacer()
             Button {
 //                vm.addActivity(title: activityTitle, obj: activityObjective, tag: [])
+                router.addToPath(screen: .guidelinesView)
+                
             } label: {
                 Text("Next")
                     .foregroundStyle(Color.white)

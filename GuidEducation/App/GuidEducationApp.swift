@@ -22,6 +22,8 @@ struct GuidEducationApp: App {
                             NewActive()
 //                        case .homeView:
 //                            HomeView()
+                        case .guidelinesView:
+                            ListGuidelinesView()
                         }
                     }
             }

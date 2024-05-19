@@ -10,6 +10,7 @@ import SwiftUI
 
 enum Screen: Hashable {
     case newActive
+    case guidelinesView
 //    case homeView
     
     func hash(into hasher: inout Hasher) {
