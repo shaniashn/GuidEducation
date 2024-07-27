@@ -14,7 +14,7 @@ class ActivityManager {
     let context: NSManagedObjectContext
     
     init() {
-        container = NSPersistentContainer(name: "GuidEducationModel")
+        container = NSPersistentContainer(name: "GuidEducationModelData")
         container.loadPersistentStores { (description, error) in
             if let error = error {
                 fatalError("Error loading CoreData. \(error)")
@@ -36,6 +36,7 @@ class ActivityViewModel: ObservableObject {
     
     @Published var weekOfMonthPointt = 1
     
+
     @Published var activities: [ActivityEntity] = []
     @Published var methods: [MethodEntity]?
     @Published var engages: Engage = engageItem
@@ -187,15 +188,21 @@ class ActivityViewModel: ObservableObject {
         guard let entityActivity = NSEntityDescription.entity(forEntityName: "ActivityEntity", in: manager.context) else { return }
         let objActivity = NSManagedObject(entity: entityActivity, insertInto: manager.context)
         objActivity.setValue(title, forKeyPath: "title")
+        print("title: ", title)
+        print(objActivity.value(forKeyPath: "title"))
+        saveItems()
+        
     }
     
     func saveItems() {
         do {
             try manager.context.save()
+            print("saved")
         } catch {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
+        fetchRequest()
     }
 }
 

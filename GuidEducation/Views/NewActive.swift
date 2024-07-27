@@ -46,19 +46,6 @@ struct NewActive: View {
                     }
                 }
                 
-                VStack(alignment:.leading){
-                    Text("Activity Objective")
-                        .font(.system(size: 22, weight: .bold))
-                    TextField(text: $activityObjective) {
-                        Text("e.g Students can calculate area")
-                    }
-                    .padding(10)
-                    .background {
-                        RoundedRectangle(cornerRadius: 10)
-                            .fill(Color.gray.opacity(0.1))
-                    }
-                }
-                
                 VStack(alignment: .leading, content: {
                     Button(action: {
                         
@@ -106,7 +93,8 @@ struct NewActive: View {
             .padding()
             Spacer()
             Button {
-//                vm.addActivity(title: activityTitle, obj: activityObjective, tag: [])
+                vm.addActivity(title: activityTitle, obj: activityObjective, tag: [])
+                vm.fetchRequest()
                 router.addToPath(screen: .guidelinesView)
                 
             } label: {

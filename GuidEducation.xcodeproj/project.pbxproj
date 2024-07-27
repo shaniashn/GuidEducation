@@ -14,6 +14,7 @@
 		000ED9262BCFBFDC00FD50EF /* ThinkView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000ED9252BCFBFDC00FD50EF /* ThinkView.swift */; };
 		000ED9282BCFC02700FD50EF /* ConfidenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000ED9272BCFC02700FD50EF /* ConfidenceView.swift */; };
 		000ED92A2BD00A8600FD50EF /* MethodRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 000ED9292BD00A8600FD50EF /* MethodRow.swift */; };
+		000F27AF2C4CD7B5006C278B /* GuidEducationModelData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 000F27AD2C4CD7B5006C278B /* GuidEducationModelData.xcdatamodeld */; };
 		002BCB2A2A7A9847003C9ED4 /* TagView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002BCB292A7A9847003C9ED4 /* TagView.swift */; };
 		002C2AB72BD98B1600A14792 /* WrapHStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C2AB62BD98B1600A14792 /* WrapHStack.swift */; };
 		002C2AB92BDA11C300A14792 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 002C2AB82BDA11C300A14792 /* CalendarView.swift */; };
@@ -31,7 +32,6 @@
 		007A7BEC2A372924001DB240 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BEB2A372924001DB240 /* ProfileView.swift */; };
 		007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF12A372BE1001DB240 /* ActivityModel.swift */; };
 		007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 007A7BF32A372D1E001DB240 /* ActivityCardView.swift */; };
-		00ACC4EF2BDF47110078E583 /* GuidEducationModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 00ACC4ED2BDF47110078E583 /* GuidEducationModel.xcdatamodeld */; };
 		00AF37FF2BF4DD9C00B53E39 /* NewActive.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AF37FE2BF4DD9C00B53E39 /* NewActive.swift */; };
 		00AF38012BF4E09000B53E39 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AF38002BF4E09000B53E39 /* Router.swift */; };
 		00AF38052BF4EF1D00B53E39 /* ListGuidelinesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00AF38042BF4EF1D00B53E39 /* ListGuidelinesView.swift */; };
@@ -51,6 +51,7 @@
 		000ED9252BCFBFDC00FD50EF /* ThinkView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThinkView.swift; sourceTree = "<group>"; };
 		000ED9272BCFC02700FD50EF /* ConfidenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfidenceView.swift; sourceTree = "<group>"; };
 		000ED9292BD00A8600FD50EF /* MethodRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MethodRow.swift; sourceTree = "<group>"; };
+		000F27AE2C4CD7B5006C278B /* GuidEducationModelData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuidEducationModelData.xcdatamodel; sourceTree = "<group>"; };
 		002BCB292A7A9847003C9ED4 /* TagView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagView.swift; sourceTree = "<group>"; };
 		002C2AB62BD98B1600A14792 /* WrapHStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WrapHStack.swift; sourceTree = "<group>"; };
 		002C2AB82BDA11C300A14792 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -69,7 +70,6 @@
 		007A7BEB2A372924001DB240 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		007A7BF12A372BE1001DB240 /* ActivityModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityModel.swift; sourceTree = "<group>"; };
 		007A7BF32A372D1E001DB240 /* ActivityCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCardView.swift; sourceTree = "<group>"; };
-		00ACC4EE2BDF47110078E583 /* GuidEducationModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GuidEducationModel.xcdatamodel; sourceTree = "<group>"; };
 		00AF37FE2BF4DD9C00B53E39 /* NewActive.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActive.swift; sourceTree = "<group>"; };
 		00AF38002BF4E09000B53E39 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		00AF38042BF4EF1D00B53E39 /* ListGuidelinesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListGuidelinesView.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 			children = (
 				007A7BF12A372BE1001DB240 /* ActivityModel.swift */,
 				00CC6B602BCE527D00E6C5A2 /* GlobalVar.swift */,
-				00ACC4ED2BDF47110078E583 /* GuidEducationModel.xcdatamodeld */,
+				000F27AD2C4CD7B5006C278B /* GuidEducationModelData.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -265,7 +265,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1530;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					007A7BD52A372895001DB240 = {
 						CreatedOnToolsVersion = 14.3;
@@ -321,6 +321,7 @@
 				007A7BEC2A372924001DB240 /* ProfileView.swift in Sources */,
 				00CC6B5F2BCD310600E6C5A2 /* GuidelinesViewModel.swift in Sources */,
 				00AF37FF2BF4DD9C00B53E39 /* NewActive.swift in Sources */,
+				000F27AF2C4CD7B5006C278B /* GuidEducationModelData.xcdatamodeld in Sources */,
 				006FEB1E2A753B8B0081060D /* TodayActivityCard.swift in Sources */,
 				000ED9222BCFBE3E00FD50EF /* EngageView.swift in Sources */,
 				007A7BF42A372D1E001DB240 /* ActivityCardView.swift in Sources */,
@@ -332,7 +333,6 @@
 				002C2AB72BD98B1600A14792 /* WrapHStack.swift in Sources */,
 				00B7F70C2A37A7ED0082ED63 /* GuideCardView.swift in Sources */,
 				00694D6B2BA9CA8B008E116E /* ActivityViewModel.swift in Sources */,
-				00ACC4EF2BDF47110078E583 /* GuidEducationModel.xcdatamodeld in Sources */,
 				002C2AB92BDA11C300A14792 /* CalendarView.swift in Sources */,
 				00064A352BB0440A00DB2179 /* NewActivityView.swift in Sources */,
 				007A7BF22A372BE1001DB240 /* ActivityModel.swift in Sources */,
@@ -349,6 +349,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -410,6 +411,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -543,14 +545,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		00ACC4ED2BDF47110078E583 /* GuidEducationModel.xcdatamodeld */ = {
+		000F27AD2C4CD7B5006C278B /* GuidEducationModelData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				00ACC4EE2BDF47110078E583 /* GuidEducationModel.xcdatamodel */,
+				000F27AE2C4CD7B5006C278B /* GuidEducationModelData.xcdatamodel */,
 			);
-			currentVersion = 00ACC4EE2BDF47110078E583 /* GuidEducationModel.xcdatamodel */;
-			name = GuidEducationModel.xcdatamodeld;
-			path = /Users/shaniasiahaan/Documents/latihan/latihan/GuidEducation/GuidEducation/Model/GuidEducationModel.xcdatamodeld;
+			currentVersion = 000F27AE2C4CD7B5006C278B /* GuidEducationModelData.xcdatamodel */;
+			name = GuidEducationModelData.xcdatamodeld;
+			path = /Users/shaniasiahaan/Documents/Latihan/iOS/GuidEducation/GuidEducation/Model/GuidEducationModelData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

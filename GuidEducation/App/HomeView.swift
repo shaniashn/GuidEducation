@@ -32,9 +32,8 @@ struct HomeView: View {
 //                                .padding()
 //                        }
                         Button(action: {
-                            print("wtf is going on")
                             router.addToPath(screen: .newActive)
-//                            NewActive()
+                            
                         }, label: {
                             Image(systemName: "plus")
                                 .resizable()

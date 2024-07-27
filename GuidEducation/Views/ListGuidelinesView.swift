@@ -24,6 +24,11 @@ struct ListGuidelinesView: View {
             } label: {
                 GuideCardView(imageGuides: vm.activity.guideline[1].imageGuides, textGuides: vm.activity.guideline[1].textGuides, subTextGuides: vm.activity.guideline[1].subTextGuides)
             }
+//            ForEach(vm.activities) { act in
+//                Text(act.title ?? "nulllll?")
+//                
+//            }
+            
 //                        NavigationLink {
 //                            ThinkView(think: vm.activity.guide!.think)
 //                        } label: {

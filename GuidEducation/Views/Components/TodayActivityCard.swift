@@ -71,7 +71,7 @@ struct TodayActivityCard: View {
         .foregroundColor(Color.white)
         .frame(maxWidth: .infinity)
         .padding(10)
-        .background(Color.myBlue)
+        .background(Color(.blue30))
         .cornerRadius(12)
     }
 }
