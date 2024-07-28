@@ -158,6 +158,9 @@ class ActivityViewModel: ObservableObject {
     }
     
     func fetchRequest() {
+        
+        print("fetching...")
+        
         let request = NSFetchRequest<ActivityEntity>(entityName: "ActivityEntity")
         let requestMethod = NSFetchRequest<MethodEntity>(entityName: "MethodEntity")
         
@@ -191,18 +194,25 @@ class ActivityViewModel: ObservableObject {
         print("title: ", title)
         print(objActivity.value(forKeyPath: "title"))
         saveItems()
+    }
+    
+    func addActivityV2(title: String) {
+        var activityItem = ActivityEntity(context: manager.context)
+        activityItem.title = title
+        saveItems()
         
     }
     
     func saveItems() {
         do {
             try manager.context.save()
+            fetchRequest()
             print("saved")
         } catch {
             let nsError = error as NSError
             fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
         }
-        fetchRequest()
+        
     }
 }
 

@@ -93,8 +93,13 @@ struct NewActive: View {
             .padding()
             Spacer()
             Button {
-                vm.addActivity(title: activityTitle, obj: activityObjective, tag: [])
-                vm.fetchRequest()
+//                vm.addActivity(title: activityTitle, obj: activityObjective, tag: [])
+//                vm.fetchRequest()
+                vm.addActivityV2(title: activityTitle)
+                ForEach(vm.activities) { act in
+                    
+                    print("\()")
+                }
                 router.addToPath(screen: .guidelinesView)
                 
             } label: {
