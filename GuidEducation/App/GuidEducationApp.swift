@@ -11,6 +11,7 @@ import SwiftUI
 struct GuidEducationApp: App {
     @StateObject var router = Router()
     @StateObject var vm = ActivityViewModel()
+    var manager = ActivityManager()
     
     var body: some Scene {
         WindowGroup {
@@ -28,9 +29,11 @@ struct GuidEducationApp: App {
                             ListGuidelinesView()
                         }
                     }
+                    
             }
             .environmentObject(router)
             .environmentObject(vm)
+            .environment(\.managedObjectContext, manager.context)
         }
     }
 }
