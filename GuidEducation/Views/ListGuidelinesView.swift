@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ListGuidelinesView: View {
     @EnvironmentObject var vm: ActivityViewModel
+    @FetchRequest(sortDescriptors: []) var activityItem: FetchedResults<ActivityEntity>
     
     var body: some View {
         VStack(alignment: .leading) {
@@ -25,9 +26,16 @@ struct ListGuidelinesView: View {
                 GuideCardView(imageGuides: vm.activity.guideline[1].imageGuides, textGuides: vm.activity.guideline[1].textGuides, subTextGuides: vm.activity.guideline[1].subTextGuides)
             }
             
-            ForEach(vm.activities) { act in
-                Text("")
+            List {
+                ForEach(activityItem) { item in
+                    Text("\(item.title ?? "ksonk")")
+                }
+                Text("aoalah")
             }
+            
+//            ForEach(vm.activities) { act in
+//                Text("")
+//            }
 //            ForEach(vm.activities) { act in
 //                Text(act.title ?? "nulllll?")
 //                

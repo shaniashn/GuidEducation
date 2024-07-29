@@ -15,7 +15,8 @@ struct GuidEducationApp: App {
     var body: some Scene {
         WindowGroup {
             NavigationStack(path: $router.paths) {
-                ListGuidelinesView()
+//                ListGuidelinesView()
+                HomeView()
                     .navigationDestination(for: Screen.self) { screen in
                         switch(screen) {
                         case .newActive:

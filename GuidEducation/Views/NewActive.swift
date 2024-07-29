@@ -97,8 +97,7 @@ struct NewActive: View {
 //                vm.fetchRequest()
                 vm.addActivityV2(title: activityTitle)
                 ForEach(vm.activities) { act in
-                    
-                    print("\()")
+                    Text(act.title ?? "nul?")
                 }
                 router.addToPath(screen: .guidelinesView)
                 

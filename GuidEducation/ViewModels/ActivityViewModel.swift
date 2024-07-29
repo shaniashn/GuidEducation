@@ -167,6 +167,7 @@ class ActivityViewModel: ObservableObject {
         do {
             activities = try manager.context.fetch(request)
 //            methods = try manager.context.fetch(requestMethod)
+            print(activities)
         } catch let error as NSError {
             print("Can't fetch data. \(error)")
         }
